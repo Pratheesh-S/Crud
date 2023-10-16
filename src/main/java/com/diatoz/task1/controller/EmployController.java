@@ -17,6 +17,7 @@ public class EmployController {
     @RequestMapping(value = "/saveEmploy", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<EmployEntity> saveEmploy(@RequestBody EmployEntity employEntity)
     {
+
       return ResponseEntity.ok(employService.saveEmploy(employEntity));
     }
     @RequestMapping(value = "/getEmploy", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
