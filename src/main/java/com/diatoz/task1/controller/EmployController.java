@@ -3,6 +3,7 @@ package com.diatoz.task1.controller;
 import com.diatoz.task1.entity.EmployEntity;
 import com.diatoz.task1.service.EmployServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@Profile("admin")
 public class EmployController {
     @Autowired
     EmployServiceImpl employService;
