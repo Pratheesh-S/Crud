@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "studentId": {
+      "type": "integer",
+      "description": "Student id will auto generated"
+    },
+    "studentName": {
+      "type": "string",
+      "description": "name of the student",
+      "minLength": 1
+    },
+    "studentLocation": {
+      "type": "string",
+      "description": "native place of student",
+      "minLength": 1
+
+    },
+    "graduated": {
+      "type": "boolean",
+      "description": "Whether student is graduated or not"
+    },
+    "college": {
+      "type": "object",
+      "properties": {
+        "collegeId": {
+          "type": "integer",
+          "description": "Uniquely represent the College"
+        },
+        "collegeName": {
+          "type": "string",
+          "minLength": 1
+
+        },
+        "collegeLocation": {
+          "type": "string",
+          "minLength": 1
+
+        }
+      },
+      "required": [ "collegeId","collegeName", "collegeLocation"]
+    },
+    "studentJoinYear": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Joining data of student"
+    }
+  },
+  "required": [ "studentName", "studentLocation", "graduated", "college", "studentJoinYear"]
+}

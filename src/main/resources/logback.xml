@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-
-
     <appender name="allLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>log/allLog.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
@@ -9,7 +7,6 @@
             <maxFileSize>50KB</maxFileSize>
             <maxHistory>20</maxHistory>
             <totalSizeCap>1MB</totalSizeCap>
-
         </rollingPolicy>
         <encoder>
             <pattern>%d{HH:mm:ss} [%thread] %-5level %-40logger{36} -: %msg%n</pattern>

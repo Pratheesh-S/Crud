@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "collegeId": {
+      "type": "integer",
+      "description": "College ID"
+    },
+    "collegeName": {
+      "type": "string",
+      "description": "Name of the college",
+      "minLength": 1
+    },
+    "collegeLocation": {
+      "type": "string",
+      "description": "Location of the college",
+      "minLength": 1
+    }
+  },
+  "required": ["collegeName", "collegeLocation"]
+}

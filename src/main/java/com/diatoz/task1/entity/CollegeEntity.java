@@ -35,4 +35,12 @@ public class CollegeEntity {
         this.collegeLocation = collegeLocation;
     }
 
+    @Override
+    public String toString() {
+        return "CollegeEntity{" +
+                "collegeId=" + collegeId +
+                ", collegeName='" + collegeName + '\'' +
+                ", collegeLocation='" + collegeLocation + '\'' +
+                '}';
+    }
 }
