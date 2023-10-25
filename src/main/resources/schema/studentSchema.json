@@ -4,7 +4,7 @@
   "properties": {
     "studentId": {
       "type": "integer",
-      "description": "Student id will auto generated",
+      "description": "Student id will auto generated"
     },
     "studentName": {
       "type": "string",
