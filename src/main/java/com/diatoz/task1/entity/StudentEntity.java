@@ -2,6 +2,9 @@ package com.diatoz.task1.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Pattern;
 
 import java.util.Date;
 
@@ -14,10 +17,14 @@ public class StudentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description ="Id will auto generated")
     private Integer studentId;
+
+    @NotBlank(message = "Student name least contain one character")
     private String studentName;
     private String studentLocation;
 
     @Temporal(TemporalType.DATE)
+//    @Pattern(regexp ="^\\d{4}-\\d{2}-\\d{2}$",message = "{student.joiningYear.pattern}")
+    @Past(message = "{student.joiningYear.past}")
     private Date StudentJoinYear;
 
     private boolean graduated;

@@ -4,7 +4,7 @@
   "properties": {
     "studentId": {
       "type": "integer",
-      "description": "Student id will auto generated"
+      "description": "Student id will auto generated",
     },
     "studentName": {
       "type": "string",
@@ -39,10 +39,11 @@
 
         }
       },
-      "required": [ "collegeId","collegeName", "collegeLocation"]
+      "required": [ "collegeId"]
     },
     "studentJoinYear": {
       "type": "string",
+      "format": "date",
       "minLength": 1,
       "description": "Joining data of student"
     }

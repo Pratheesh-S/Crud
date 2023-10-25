@@ -2,6 +2,7 @@ package com.diatoz.task1.exceptionHandler;
 
 import com.diatoz.task1.customException.DataNotProper;
 import com.diatoz.task1.customException.IdException;
+import com.diatoz.task1.customException.StudentDataException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import java.util.Map;
 import java.util.Objects;
 
 @ControllerAdvice
@@ -36,6 +38,11 @@ public class GlobalExceptionHandler {
     {
 
         return new ResponseEntity<>(Objects.requireNonNull(jsonProcessingException.getCause()). getMessage(),HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(StudentDataException.class)
+    public ResponseEntity<Map<String,String>> getStudentDataException(StudentDataException studentDataException)
+    {
+        return new ResponseEntity<>(studentDataException.getError(),HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(Exception.class)

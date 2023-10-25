@@ -5,6 +5,8 @@ import com.diatoz.task1.dao.CollegeDao;
 import com.diatoz.task1.dao.StudentDao;
 import com.diatoz.task1.entity.CollegeEntity;
 import com.diatoz.task1.entity.StudentEntity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
@@ -19,12 +21,15 @@ public class CollegeServiceImpl  implements CollegeService{
     @Autowired
     StudentDao studentDao;
 
+   Logger logger =  LoggerFactory.getLogger(CollegeService.class);
+
     @Override
     public CollegeEntity saveCollege(CollegeEntity collegeEntity) throws IdException, DataAccessException {
         if(collegeEntity.getCollegeId()!=null && collegeDao.findById(collegeEntity.getCollegeId()).isPresent())
         {
             throw new IdException("College with Given Id Already Present and you don't need to provide Id it will Auto generate");
         }
+
         return collegeDao.save(collegeEntity);
     }
 
@@ -33,14 +38,22 @@ public class CollegeServiceImpl  implements CollegeService{
         Optional<CollegeEntity> collegeEntity = collegeDao.findById(id);
         if (collegeEntity.isPresent()) {
             List<StudentEntity> allStudentWithCollegeId = studentDao.findStudentsByCollege_CollegeId(id);
-            if(!allStudentWithCollegeId.isEmpty())
+            long studentCount = allStudentWithCollegeId.stream().filter(studentEntity-> !studentEntity.isGraduated()).count();
+            if(studentCount>0)
             {
                 throw new IdException("Unable to delete the College with a given id " + id +
                         " because there are "
-                + allStudentWithCollegeId.size() + " Student studying in the college ");
+                + studentCount + " Student studying in the college ");
             }
-            collegeDao.deleteById(id);
-            return "College with given id " + id + " removed successfully";
+            else {
+                logger.info("All student are already Graduated So we can remove college by remove student if any");
+                for(StudentEntity studentEntity:allStudentWithCollegeId)
+                {
+                    studentDao.deleteById(studentEntity.getStudentId());
+                }
+                collegeDao.deleteById(id);
+                return "College with given id " + id + " removed successfully";
+            }
         } else {
             throw new IdException("College with given  id "+ id + " not Present in DataBase");
 
