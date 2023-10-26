@@ -4,7 +4,6 @@ import com.diatoz.task1.customException.IdException;
 import com.diatoz.task1.dao.CollegeDao;
 import com.diatoz.task1.dao.StudentDao;
 import com.diatoz.task1.entity.StudentEntity;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
@@ -21,62 +20,58 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public StudentEntity saveStudent(StudentEntity studentEntity) throws IdException, DataAccessException {
-        Integer collegeId =studentEntity.getCollege().getCollegeId();
-        if(studentEntity.getStudentId()!=null && studentDao.findById(studentEntity.getStudentId()).isPresent())
-        {
+        Integer collegeId = studentEntity.getCollege().getCollegeId();
+        if (studentEntity.getStudentId() != null && studentDao.findById(studentEntity.getStudentId()).isPresent()) {
             throw new IdException("Student with Given Id Already Present and you don't need to provide Id it will Auto generate");
         }
-        if(collegeId == null )
-        {
+        if (collegeId == null) {
             throw new IdException(" College data is missing for a student, Please provide the valid college data ");
         }
-        if(collegeDao.findById(collegeId).isEmpty())
-        {
+        if (collegeDao.findById(collegeId).isEmpty()) {
             throw new IdException(" College With given id not present in data base");
         }
         studentDao.save(studentEntity);
 
         Optional<StudentEntity> studentData = studentDao.findById(studentEntity.getStudentId());
-        if(studentData.isEmpty())
-        {
+        if (studentData.isEmpty()) {
             throw new IdException(" Unable to save the Student Details in database, Check manually  ");
         }
         return studentData.get();
     }
 
     @Override
-    public String removeStudent(Integer id) throws IdException,DataAccessException {
+    public String removeStudent(Integer id) throws IdException, DataAccessException {
         Optional<StudentEntity> studentEntity = studentDao.findById(id);
         if (studentEntity.isPresent()) {
             studentDao.deleteById(id);
             return "Student with given id " + id + " removed successfully";
         } else {
-           throw new IdException("Student with given  id "+ id + " not Present in DataBase");
+            throw new IdException("Student with given  id " + id + " not Present in DataBase");
 
         }
     }
 
     @Override
-    public List<StudentEntity> getALlStudent() throws DataAccessException{
+    public List<StudentEntity> getALlStudent() throws DataAccessException {
         return studentDao.findAll();
     }
 
     @Override
-    public String updateStudent(StudentEntity studentEntity) throws IdException ,DataAccessException{
+    public String updateStudent(StudentEntity studentEntity) throws IdException, DataAccessException {
         Optional<StudentEntity> studentData = studentDao.findById(studentEntity.getStudentId());
         if (studentData.isPresent()) {
             studentDao.save(studentEntity);
             return "Student with id " + studentEntity.getStudentId() + " update successfully";
         } else {
-            throw new IdException("Student with given  id "+ studentEntity.getStudentId() + " not Present in DataBase");
+            throw new IdException("Student with given  id " + studentEntity.getStudentId() + " not Present in DataBase");
 
         }
     }
 
     @Override
-    public StudentEntity getStudentById(Integer id) throws IdException,DataAccessException {
+    public StudentEntity getStudentById(Integer id) throws IdException, DataAccessException {
         Optional<StudentEntity> studentEntity = studentDao.findById(id);
-        if(studentEntity.isPresent())
+        if (studentEntity.isPresent())
             return studentEntity.get();
         throw new IdException("Student with given id not present in data base");
     }

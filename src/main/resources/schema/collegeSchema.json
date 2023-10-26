@@ -17,5 +17,8 @@
       "minLength": 1
     }
   },
-  "required": ["collegeName", "collegeLocation"]
+  "required": [
+    "collegeName",
+    "collegeLocation"
+  ]
 }

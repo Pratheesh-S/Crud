@@ -8,7 +8,6 @@ import com.diatoz.task1.entity.StudentEntity;
 import com.diatoz.task1.service.StudentServiceImpl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.swagger.v3.oas.annotations.Operation;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,26 +37,21 @@ public class StudentController {
     @Operation(summary = "save the student record", description = "save the student details along with the college ,note: college details has to be in database")
     public ResponseEntity<StudentEntity> saveStudent(@Validated @RequestBody StudentEntity studentEntity, BindingResult result) throws IdException, DataNotProper, JsonProcessingException, StudentDataException {
         logger.info("Inside the Control class" + studentEntity.getStudentJoinYear());
-         if(result.hasErrors())
-         {
-             Map<String,String> errorMap = new HashMap<>();
-             for(FieldError fieldError:result.getFieldErrors())
-             {
-                 errorMap.put(fieldError.getField(),fieldError.getDefaultMessage());
-             }
+        if (result.hasErrors()) {
+            Map<String, String> errorMap = new HashMap<>();
+            for (FieldError fieldError : result.getFieldErrors()) {
+                errorMap.put(fieldError.getField(), fieldError.getDefaultMessage());
+            }
 
-             logger.info(errorMap.toString());
-              throw new StudentDataException(errorMap);
-         }
-          if(studentDataValidation.checkTheStudentData(studentEntity)){
-              return ResponseEntity.ok(studentService.saveStudent((studentEntity)));
-          }
-          else
-              return null;
+            logger.info(errorMap.toString());
+            throw new StudentDataException(errorMap);
+        }
+        if (studentDataValidation.checkTheStudentData(studentEntity)) {
+            return ResponseEntity.ok(studentService.saveStudent((studentEntity)));
+        } else
+            return null;
 
     }
-
-
 
 
     @RequestMapping(value = "/getStudent", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -80,9 +74,6 @@ public class StudentController {
     public ResponseEntity<String> getStudentById(@RequestBody StudentEntity studentEntity) throws IdException {
         return ResponseEntity.ok(studentService.updateStudent(studentEntity));
     }
-
-
-
 
 
 }

@@ -4,7 +4,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Past;
-import jakarta.validation.constraints.Pattern;
 
 import java.util.Date;
 
@@ -15,7 +14,7 @@ import java.util.Date;
 public class StudentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description ="Id will auto generated")
+    @Schema(description = "Id will auto generated")
     private Integer studentId;
 
     @NotBlank(message = "Student name least contain one character")
@@ -30,7 +29,7 @@ public class StudentEntity {
     private boolean graduated;
 
     @ManyToOne
-    @JoinColumn(name = "collegeId",referencedColumnName = "collegeId")
+    @JoinColumn(name = "collegeId", referencedColumnName = "collegeId")
     @Schema(description = "college data should be present in database")
     private CollegeEntity college;
 

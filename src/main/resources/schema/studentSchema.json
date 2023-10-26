@@ -15,7 +15,6 @@
       "type": "string",
       "description": "native place of student",
       "minLength": 1
-
     },
     "graduated": {
       "type": "boolean",
@@ -31,15 +30,15 @@
         "collegeName": {
           "type": "string",
           "minLength": 1
-
         },
         "collegeLocation": {
           "type": "string",
           "minLength": 1
-
         }
       },
-      "required": [ "collegeId"]
+      "required": [
+        "collegeId"
+      ]
     },
     "studentJoinYear": {
       "type": "string",
@@ -48,5 +47,11 @@
       "description": "Joining data of student"
     }
   },
-  "required": [ "studentName", "studentLocation", "graduated", "college", "studentJoinYear"]
+  "required": [
+    "studentName",
+    "studentLocation",
+    "graduated",
+    "college",
+    "studentJoinYear"
+  ]
 }

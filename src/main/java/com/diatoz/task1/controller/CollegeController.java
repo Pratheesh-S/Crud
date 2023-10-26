@@ -10,7 +10,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,10 +29,10 @@ public class CollegeController {
     @RequestMapping(value = "/saveCollege", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "save the college record", description = "save the college details ")
     public ResponseEntity<CollegeEntity> saveCollege(@RequestBody CollegeEntity collegeEntity) throws IdException, DataNotProper, JsonProcessingException {
-          if(collegeDataValidator.checkTheCollegeData(collegeEntity))
-                return ResponseEntity.ok(collegeService.saveCollege(collegeEntity));
-          else
-              return null;
+        if (collegeDataValidator.checkTheCollegeData(collegeEntity))
+            return ResponseEntity.ok(collegeService.saveCollege(collegeEntity));
+        else
+            return null;
     }
 
     @RequestMapping(value = "/getCollege", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -56,7 +55,6 @@ public class CollegeController {
     public ResponseEntity<String> getCollegeById(@RequestBody CollegeEntity collegeEntity) throws IdException {
         return ResponseEntity.ok(collegeService.updateCollege(collegeEntity));
     }
-
 
 
 }

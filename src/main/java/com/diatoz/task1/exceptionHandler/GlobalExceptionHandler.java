@@ -20,35 +20,33 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> showException(IdException IdException) {
         return new ResponseEntity<>(IdException.getMessage(), HttpStatus.BAD_REQUEST);
     }
-    @ExceptionHandler(DataNotProper.class)
-    public ResponseEntity<String> getDataNotProper(DataNotProper dataNotProper)
-    {
 
-        return new ResponseEntity<>(dataNotProper.getMessage(),HttpStatus.BAD_REQUEST);
+    @ExceptionHandler(DataNotProper.class)
+    public ResponseEntity<String> getDataNotProper(DataNotProper dataNotProper) {
+
+        return new ResponseEntity<>(dataNotProper.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(DataAccessException.class)
-    public ResponseEntity<String> databaseException(DataAccessException dataAccessException)
-    {
+    public ResponseEntity<String> databaseException(DataAccessException dataAccessException) {
 
-        return new ResponseEntity<>(Objects.requireNonNull(dataAccessException.getRootCause()). getMessage(),HttpStatus.SERVICE_UNAVAILABLE);
+        return new ResponseEntity<>(Objects.requireNonNull(dataAccessException.getRootCause()).getMessage(), HttpStatus.SERVICE_UNAVAILABLE);
     }
+
     @ExceptionHandler(JsonProcessingException.class)
-    public ResponseEntity<String> databaseException(JsonProcessingException jsonProcessingException)
-    {
+    public ResponseEntity<String> databaseException(JsonProcessingException jsonProcessingException) {
 
-        return new ResponseEntity<>(Objects.requireNonNull(jsonProcessingException.getCause()). getMessage(),HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(Objects.requireNonNull(jsonProcessingException.getCause()).getMessage(), HttpStatus.BAD_REQUEST);
     }
+
     @ExceptionHandler(StudentDataException.class)
-    public ResponseEntity<Map<String,String>> getStudentDataException(StudentDataException studentDataException)
-    {
-        return new ResponseEntity<>(studentDataException.getError(),HttpStatus.BAD_REQUEST);
+    public ResponseEntity<Map<String, String>> getStudentDataException(StudentDataException studentDataException) {
+        return new ResponseEntity<>(studentDataException.getError(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> getExceptionMessage(Exception e)
-    {
-        return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
+    public ResponseEntity<String> getExceptionMessage(Exception e) {
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
 }

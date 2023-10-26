@@ -1,19 +1,34 @@
-15:52:28 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
-15:52:28 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected StandardServletMultipartResolver
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected AcceptHeaderLocaleResolver
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected FixedThemeResolver
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@30ce78e3
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.support.SessionFlashMapManager@2ebd6a0d
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-15:52:28 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 4 ms
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/student/saveStudent", parameters={}
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#saveStudent(StudentEntity, BindingResult)
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.entity.StudentEntity@5680062c]
-15:52:28 [http-nio-8080-exec-1] INFO  c.d.t.controller.StudentController       -: Inside the Control classWed Dec 25 05:30:00 IST 2024
-15:52:28 [http-nio-8080-exec-1] INFO  c.d.t.controller.StudentController       -: {StudentJoinYear=student joining date cannot contain future date}
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#getStudentDataException(StudentDataException)
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing [{StudentJoinYear=student joining date cannot contain future date}]
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [com.diatoz.task1.customException.StudentDataException]
-15:52:28 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
+10:14:13 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:14:13 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+10:14:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected StandardServletMultipartResolver
+10:14:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected AcceptHeaderLocaleResolver
+10:14:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected FixedThemeResolver
+10:14:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1390a43a
+10:14:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.support.SessionFlashMapManager@769b1d1c
+10:14:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:14:13 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 5 ms
+10:14:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: GET "/swagger-ui/swagger-initializer.js", parameters={}
+10:14:13 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping        -: Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+10:14:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 200 OK
+10:14:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: GET "/v3/api-docs/swagger-config", parameters={}
+10:14:14 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+10:14:14 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Using 'application/json', given [*/*] and supported [application/json]
+10:14:14 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8080/swagger-ui/oauth2-re (truncated)...]
+10:14:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 200 OK
+10:14:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet        -: GET "/v3/api-docs", parameters={}
+10:14:14 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+10:14:14 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource          -: Init duration for springdoc-openapi is: 496 ms
+10:14:14 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Using 'application/json', given [application/json, */*] and supported [application/json]
+10:14:14 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+10:14:14 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 200 OK
+10:16:05 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet        -: DELETE "/college/removeCollege/2", parameters={}
+10:16:05 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.CollegeController#removeCollegeById(Integer)
+10:16:05 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL                        -: select c1_0.college_id,c1_0.college_location,c1_0.college_name from college c1_0 where c1_0.college_id=?
+10:16:06 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL                        -: select s1_0.student_id,s1_0.student_join_year,s1_0.college_id,s1_0.graduated,s1_0.student_location,s1_0.student_name from student s1_0 where s1_0.college_id=?
+10:16:06 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#showException(IdException)
+10:16:06 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+10:16:06 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing ["Unable to delete the College with a given id 2 because there are 2 Student studying in the college "]
+10:16:06 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [com.diatoz.task1.customException.IdException: Unable to delete the College with a given id 2 because there are 2 Student studying in the college ]
+10:16:06 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
+10:39:19 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m55s330ms703µs600ns).
+14:39:34 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h3m13s145ms683µs).
