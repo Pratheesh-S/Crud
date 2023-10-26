@@ -1,80 +1,45 @@
-12:38:27 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
-12:38:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
-12:38:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected StandardServletMultipartResolver
-12:38:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected AcceptHeaderLocaleResolver
-12:38:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected FixedThemeResolver
-12:38:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5b27d03d
-12:38:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.support.SessionFlashMapManager@325a781c
-12:38:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-12:38:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 4 ms
-12:38:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/student/saveStudent", parameters={}
-12:38:27 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#saveStudent(StudentEntity, HttpServletRequest)
-12:38:27 [http-nio-8080-exec-1] INFO  c.d.t.i.InputDataValidateInterceptor     -: Inside PreHandler
-12:38:27 [http-nio-8080-exec-1] INFO  c.d.t.i.InputDataValidateInterceptor     -: [$.studentName: is missing but it is required, $.studentJoinYear: does not match the regex pattern ^(\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$]
-12:38:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
-12:39:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/student/saveStudent", parameters={}
-12:39:13 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#saveStudent(StudentEntity, HttpServletRequest)
-12:39:13 [http-nio-8080-exec-2] INFO  c.d.t.i.InputDataValidateInterceptor     -: Inside PreHandler
-12:39:13 [http-nio-8080-exec-2] INFO  c.d.t.i.InputDataValidateInterceptor     -: [$.studentJoinYear: does not match the regex pattern ^(\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$]
-12:39:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
-12:39:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/student/saveStudent", parameters={}
-12:39:32 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#saveStudent(StudentEntity, HttpServletRequest)
-12:39:32 [http-nio-8080-exec-3] INFO  c.d.t.i.InputDataValidateInterceptor     -: Inside PreHandler
-12:39:32 [http-nio-8080-exec-3] DEBUG o.s.web.method.HandlerMethod             -: Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.diatoz.task1.entity.StudentEntity> com.diatoz.task1.controller.StudentController.saveStudent(com.diatoz.task1.entity.StudentEntity,jakarta.servlet.http.HttpServletRequest) throws com.diatoz.task1.customException.IdException,com.diatoz.task1.customException.DataNotProper,com.fasterxml.jackson.core.JsonProcessingException: getReader() has already been called for this request
-12:39:32 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#getExceptionMessage(Exception)
-12:39:32 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [application/json] and supported [text/plain, */*, application/json, application/*+json]
-12:39:32 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing ["getReader() has already been called for this request"]
-12:39:32 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [java.lang.IllegalStateException: getReader() has already been called for this request]
-12:39:32 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
-12:53:57 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s286ms386µs900ns).
-14:33:10 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m12s450ms337µs800ns).
-14:56:12 [SpringApplicationShutdownHook] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
-14:56:12 [SpringApplicationShutdownHook] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -: Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@24111ef1, started on Wed Oct 25 12:38:14 IST 2023
-14:56:13 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
-14:56:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
-14:56:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
-14:56:18 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
-14:56:18 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 11164 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
-14:56:18 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
-14:56:18 [main] DEBUG o.s.boot.SpringApplication               -: Loading source class com.diatoz.task1.Task1Application
-14:56:19 [main] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -: Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71812481
-14:56:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:56:20 [main] DEBUG o.s.b.a.AutoConfigurationPackages        -: @EnableAutoConfiguration was declared on a class in the package 'com.diatoz.task1'. Automatic @Repository and @Entity scanning is enabled.
-14:56:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
-14:56:20 [main] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory -: Code archive: C:\Users\prath\.m2\repository\org\springframework\boot\spring-boot\3.1.4\spring-boot-3.1.4.jar
-14:56:20 [main] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory -: Code archive: C:\Users\prath\.m2\repository\org\springframework\boot\spring-boot\3.1.4\spring-boot-3.1.4.jar
-14:56:20 [main] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory -: None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-14:56:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
-14:56:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
-14:56:20 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
-14:56:20 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
-14:56:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
-14:56:20 [main] DEBUG o.s.b.w.s.c.ServletWebServerApplicationContext -: Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-14:56:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1723 ms
-14:56:20 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans -: Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-14:56:20 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans -: Mapping servlets: dispatcherServlet urls=[/]
-14:56:20 [main] DEBUG o.s.b.w.s.f.OrderedRequestContextFilter  -: Filter 'requestContextFilter' configured for use
-14:56:20 [main] DEBUG o.s.b.w.s.f.OrderedCharacterEncodingFilter -: Filter 'characterEncodingFilter' configured for use
-14:56:20 [main] DEBUG o.s.b.w.s.f.OrderedFormContentFilter     -: Filter 'formContentFilter' configured for use
-14:56:20 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
-14:56:21 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
-14:56:21 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
-14:56:21 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-14:56:21 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
-14:56:21 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
-14:56:21 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46e388ec
-14:56:21 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
-14:56:22 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-14:56:22 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-14:56:22 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:56:23 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:56:23 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter -: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-14:56:23 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: 16 mappings in 'requestMappingHandlerMapping'
-14:56:23 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping        -: Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-14:56:23 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-14:56:23 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
-14:56:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
-14:56:23 [main] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger -: 
+15:47:47 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+15:47:47 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 13944 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+15:47:47 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+15:47:47 [main] DEBUG o.s.boot.SpringApplication               -: Loading source class com.diatoz.task1.Task1Application
+15:47:47 [main] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -: Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4f9a2c08
+15:47:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:47:48 [main] DEBUG o.s.b.a.AutoConfigurationPackages        -: @EnableAutoConfiguration was declared on a class in the package 'com.diatoz.task1'. Automatic @Repository and @Entity scanning is enabled.
+15:47:48 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+15:47:48 [main] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory -: Code archive: C:\Users\prath\.m2\repository\org\springframework\boot\spring-boot\3.1.4\spring-boot-3.1.4.jar
+15:47:48 [main] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory -: Code archive: C:\Users\prath\.m2\repository\org\springframework\boot\spring-boot\3.1.4\spring-boot-3.1.4.jar
+15:47:48 [main] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory -: None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+15:47:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+15:47:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+15:47:48 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+15:47:48 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+15:47:48 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+15:47:48 [main] DEBUG o.s.b.w.s.c.ServletWebServerApplicationContext -: Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+15:47:48 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1045 ms
+15:47:48 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans -: Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+15:47:48 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans -: Mapping servlets: dispatcherServlet urls=[/]
+15:47:48 [main] DEBUG o.s.b.w.s.f.OrderedRequestContextFilter  -: Filter 'requestContextFilter' configured for use
+15:47:48 [main] DEBUG o.s.b.w.s.f.OrderedCharacterEncodingFilter -: Filter 'characterEncodingFilter' configured for use
+15:47:48 [main] DEBUG o.s.b.w.s.f.OrderedFormContentFilter     -: Filter 'formContentFilter' configured for use
+15:47:48 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+15:47:48 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+15:47:48 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+15:47:48 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:47:49 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+15:47:49 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+15:47:49 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1aed6f0b
+15:47:49 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+15:47:49 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:47:50 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:47:50 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:47:50 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:47:50 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter -: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+15:47:50 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: 16 mappings in 'requestMappingHandlerMapping'
+15:47:50 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping        -: Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+15:47:50 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+15:47:50 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+15:47:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+15:47:50 [main] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger -: 
 
 
 ============================
@@ -1360,6 +1325,6 @@ Unconditional classes:
 
 
 
-14:56:23 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 5.236 seconds (process running for 6.026)
-14:56:23 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state LivenessState changed to CORRECT
-14:56:23 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+15:47:50 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 3.37 seconds (process running for 3.854)
+15:47:50 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state LivenessState changed to CORRECT
+15:47:50 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state ReadinessState changed to ACCEPTING_TRAFFIC

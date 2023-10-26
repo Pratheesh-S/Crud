@@ -1,77 +1,30 @@
-14:56:45 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
-14:56:45 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected StandardServletMultipartResolver
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected AcceptHeaderLocaleResolver
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected FixedThemeResolver
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@44ba9f25
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.support.SessionFlashMapManager@17d83fe4
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-14:56:45 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 0 ms
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/student/saveStudent", parameters={}
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#saveStudent(StudentEntity, BindingResult)
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.entity.StudentEntity@6c95de5c]
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.web.method.HandlerMethod             -: Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.diatoz.task1.entity.StudentEntity> com.diatoz.task1.controller.StudentController.saveStudent(com.diatoz.task1.entity.StudentEntity,org.springframework.validation.BindingResult) throws com.diatoz.task1.customException.IdException,com.diatoz.task1.customException.DataNotProper,com.fasterxml.jackson.core.JsonProcessingException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Pattern' validating type 'java.util.Date'. Check configuration for 'StudentJoinYear'
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#getExceptionMessage(Exception)
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [application/json] and supported [text/plain, */*, application/json, application/*+json]
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing ["HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Pattern' valida (truncated)..."]
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Pattern' validating type 'java.util.Date'. Check configuration for 'StudentJoinYear']
-14:56:45 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
-14:57:11 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/student/saveStudent", parameters={}
-14:57:11 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#saveStudent(StudentEntity, BindingResult)
-14:57:11 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.entity.StudentEntity@5fe59cf0]
-14:57:11 [http-nio-8080-exec-4] DEBUG o.s.web.method.HandlerMethod             -: Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.diatoz.task1.entity.StudentEntity> com.diatoz.task1.controller.StudentController.saveStudent(com.diatoz.task1.entity.StudentEntity,org.springframework.validation.BindingResult) throws com.diatoz.task1.customException.IdException,com.diatoz.task1.customException.DataNotProper,com.fasterxml.jackson.core.JsonProcessingException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Pattern' validating type 'java.util.Date'. Check configuration for 'StudentJoinYear'
-14:57:11 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#getExceptionMessage(Exception)
-14:57:11 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [application/json] and supported [text/plain, */*, application/json, application/*+json]
-14:57:11 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing ["HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Pattern' valida (truncated)..."]
-14:57:11 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.Pattern' validating type 'java.util.Date'. Check configuration for 'StudentJoinYear']
-14:57:11 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
-14:59:39 [SpringApplicationShutdownHook] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
-14:59:39 [SpringApplicationShutdownHook] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -: Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71812481, started on Wed Oct 25 14:56:19 IST 2023
-14:59:39 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
-14:59:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
-14:59:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
-14:59:44 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
-14:59:44 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 20852 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
-14:59:44 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
-14:59:44 [main] DEBUG o.s.boot.SpringApplication               -: Loading source class com.diatoz.task1.Task1Application
-14:59:44 [main] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -: Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71812481
-14:59:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-14:59:44 [main] DEBUG o.s.b.a.AutoConfigurationPackages        -: @EnableAutoConfiguration was declared on a class in the package 'com.diatoz.task1'. Automatic @Repository and @Entity scanning is enabled.
-14:59:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
-14:59:45 [main] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory -: Code archive: C:\Users\prath\.m2\repository\org\springframework\boot\spring-boot\3.1.4\spring-boot-3.1.4.jar
-14:59:45 [main] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory -: Code archive: C:\Users\prath\.m2\repository\org\springframework\boot\spring-boot\3.1.4\spring-boot-3.1.4.jar
-14:59:45 [main] DEBUG o.s.b.w.e.t.TomcatServletWebServerFactory -: None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-14:59:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
-14:59:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
-14:59:45 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
-14:59:45 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
-14:59:45 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
-14:59:45 [main] DEBUG o.s.b.w.s.c.ServletWebServerApplicationContext -: Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-14:59:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1515 ms
-14:59:45 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans -: Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-14:59:45 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans -: Mapping servlets: dispatcherServlet urls=[/]
-14:59:45 [main] DEBUG o.s.b.w.s.f.OrderedRequestContextFilter  -: Filter 'requestContextFilter' configured for use
-14:59:45 [main] DEBUG o.s.b.w.s.f.OrderedCharacterEncodingFilter -: Filter 'characterEncodingFilter' configured for use
-14:59:45 [main] DEBUG o.s.b.w.s.f.OrderedFormContentFilter     -: Filter 'formContentFilter' configured for use
-14:59:45 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
-14:59:45 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
-14:59:45 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
-14:59:46 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-14:59:46 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
-14:59:46 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
-14:59:46 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ba06506
-14:59:46 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
-14:59:46 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-14:59:47 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-14:59:47 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
-14:59:47 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-14:59:47 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter -: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-14:59:47 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: 16 mappings in 'requestMappingHandlerMapping'
-14:59:47 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping        -: Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-14:59:47 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-14:59:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
-14:59:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
-14:59:48 [main] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger -: 
+15:45:17 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils -: Could not detect default configuration classes for test class [com.diatoz.task1.Task1ApplicationTests]: Task1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:45:17 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper -: Found @SpringBootConfiguration com.diatoz.task1.Task1Application for test class com.diatoz.task1.Task1ApplicationTests
+15:45:18 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+15:45:18 [main] INFO  c.diatoz.task1.Task1ApplicationTests     -: Starting Task1ApplicationTests using Java 21 with PID 19880 (started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+15:45:18 [main] INFO  c.diatoz.task1.Task1ApplicationTests     -: No active profile set, falling back to 1 default profile: "default"
+15:45:18 [main] DEBUG o.s.boot.SpringApplication               -: Loading source class com.diatoz.task1.Task1Application
+15:45:18 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext   -: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3935e9a8
+15:45:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:45:18 [main] DEBUG o.s.b.a.AutoConfigurationPackages        -: @EnableAutoConfiguration was declared on a class in the package 'com.diatoz.task1'. Automatic @Repository and @Entity scanning is enabled.
+15:45:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+15:45:19 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+15:45:19 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+15:45:19 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+15:45:19 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:45:19 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+15:45:19 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+15:45:20 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65af05b2
+15:45:20 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+15:45:20 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:45:20 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:45:21 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:45:21 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:45:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter -: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+15:45:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: 16 mappings in 'requestMappingHandlerMapping'
+15:45:21 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping        -: Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+15:45:21 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+15:45:22 [main] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger -: 
 
 
 ============================
@@ -114,13 +67,6 @@ Positive matches:
       - @ConditionalOnClass found required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
       - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer,org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
-   DataSourceJmxConfiguration matched:
-      - @ConditionalOnProperty (spring.jmx.enabled=true) matched (OnPropertyCondition)
-
-   DataSourceJmxConfiguration.Hikari matched:
-      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
-      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSource' (OnBeanCondition)
-
    DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration matched:
       - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
 
@@ -144,13 +90,6 @@ Positive matches:
 
    DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration#dispatcherServletRegistration matched:
       - @ConditionalOnBean (names: dispatcherServlet types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean 'dispatcherServlet' (OnBeanCondition)
-
-   EmbeddedWebServerFactoryCustomizerAutoConfiguration matched:
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnWarDeployment the application is not deployed as a WAR file. (OnWarDeploymentCondition)
-
-   EmbeddedWebServerFactoryCustomizerAutoConfiguration.TomcatWebServerFactoryCustomizerConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol' (OnClassCondition)
 
    ErrorMvcAutoConfiguration matched:
       - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
@@ -695,9 +634,9 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
 
-   DataSourceJmxConfiguration.TomcatDataSourceJmxConfiguration:
+   DataSourceJmxConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSourceProxy' (OnClassCondition)
+         - @ConditionalOnProperty (spring.jmx.enabled=true) found different value in property 'enabled' (OnPropertyCondition)
 
    DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration:
       Did not match:
@@ -739,17 +678,11 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'com.unboundid.ldap.listener.InMemoryDirectoryServer' (OnClassCondition)
 
-   EmbeddedWebServerFactoryCustomizerAutoConfiguration.JettyWebServerFactoryCustomizerConfiguration:
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.util.Loader', 'org.eclipse.jetty.webapp.WebAppContext' (OnClassCondition)
-
-   EmbeddedWebServerFactoryCustomizerAutoConfiguration.NettyWebServerFactoryCustomizerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.netty.http.server.HttpServer' (OnClassCondition)
-
-   EmbeddedWebServerFactoryCustomizerAutoConfiguration.UndertowWebServerFactoryCustomizerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'io.undertow.Undertow', 'org.xnio.SslClientAuthMode' (OnClassCondition)
+         - Application is deployed as a WAR file. (OnWarDeploymentCondition)
+      Matched:
+         - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
 
    ErrorWebFluxAutoConfiguration:
       Did not match:
@@ -873,7 +806,7 @@ Negative matches:
 
    JmxAutoConfiguration:
       Did not match:
-         - @ConditionalOnProperty (spring.jmx.enabled=true) did not find property 'enabled' (OnPropertyCondition)
+         - @ConditionalOnProperty (spring.jmx.enabled=true) found different value in property 'enabled' (OnPropertyCondition)
       Matched:
          - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
 
@@ -1357,6 +1290,10 @@ Unconditional classes:
 
 
 
-14:59:48 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 4.496 seconds (process running for 5.148)
-14:59:48 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state LivenessState changed to CORRECT
-14:59:48 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+15:45:22 [main] INFO  c.diatoz.task1.Task1ApplicationTests     -: Started Task1ApplicationTests in 4.283 seconds (process running for 5.448)
+15:45:22 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state LivenessState changed to CORRECT
+15:45:22 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+15:45:22 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext   -: Closing org.springframework.web.context.support.GenericWebApplicationContext@3935e9a8, started on Thu Oct 26 15:45:18 IST 2023
+15:45:22 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+15:45:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+15:45:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
