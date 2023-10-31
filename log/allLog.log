@@ -1,288 +1,210 @@
-15:52:56 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
-15:52:56 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
-15:52:56 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected StandardServletMultipartResolver
-15:52:56 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected AcceptHeaderLocaleResolver
-15:52:56 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected FixedThemeResolver
-15:52:56 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@23169374
-15:52:56 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.support.SessionFlashMapManager@2786b644
-15:52:56 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-15:52:56 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 16 ms
-15:52:56 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: PUT "/student/updateStudent", parameters={}
-15:52:57 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#updateStudent(StudentEntity, BindingResult)
-15:52:57 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.entity.StudentEntity@5bf3e4e5]
-15:52:57 [http-nio-8080-exec-2] INFO  c.d.t.d.StudentDataValidation            -: Inside the student  data validator with data com.diatoz.task1.entity.StudentEntity@5bf3e4e5
-15:52:57 [http-nio-8080-exec-2] INFO  c.d.t.d.StudentDataValidation            -: {"studentId":null,"studentName":"string","studentLocation":"string","graduated":true,"college":{"collegeId":0,"collegeName":"string","collegeLocation":"string"},"studentJoinYear":"2023-10-26"}
-15:52:57 [http-nio-8080-exec-2] INFO  c.d.t.d.StudentDataValidation            -: "#" : {"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"studentName":{"type":"string","description":"name of the student","minLength":1},"studentLocation":{"type":"string","description":"native place of student","minLength":1},"graduated":{"type":"boolean","description":"Whether student is graduated or not"},"college":{"type":"object","properties":{"collegeId":{"type":"integer","description":"Uniquely represent the College"},"collegeName":{"type":"string","minLength":1},"collegeLocation":{"type":"string","minLength":1}},"required":["collegeId"]},"studentJoinYear":{"type":"string","format":"date","minLength":1,"description":"Joining data of student"}},"required":["studentName","studentLocation","graduated","college","studentJoinYear"]}
-15:52:57 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#showException(IdException)
-15:52:57 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
-15:52:57 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing ["You have to pass the Id of student which you want to update"]
-15:52:57 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [com.diatoz.task1.customException.IdException: You have to pass the Id of student which you want to update]
-15:52:57 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
-15:53:49 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet        -: PUT "/student/updateStudent", parameters={}
-15:53:49 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#updateStudent(StudentEntity, BindingResult)
-15:53:49 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.entity.StudentEntity@1df93fc2]
-15:53:49 [http-nio-8080-exec-3] INFO  c.d.t.controller.StudentController       -: {StudentJoinYear=student joining date cannot contain future date}
-15:53:49 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#getStudentDataException(StudentDataException)
-15:53:49 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-15:53:49 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing [{StudentJoinYear=student joining date cannot contain future date}]
-15:53:49 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [com.diatoz.task1.customException.StudentDataException]
-15:53:49 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
-15:53:58 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: PUT "/student/updateStudent", parameters={}
-15:53:58 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#updateStudent(StudentEntity, BindingResult)
-15:53:58 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.entity.StudentEntity@1c1521ac]
-15:53:58 [http-nio-8080-exec-1] INFO  c.d.t.d.StudentDataValidation            -: Inside the student  data validator with data com.diatoz.task1.entity.StudentEntity@1c1521ac
-15:53:58 [http-nio-8080-exec-1] INFO  c.d.t.d.StudentDataValidation            -: {"studentId":8,"studentName":"Shankar","studentLocation":"Ap","graduated":true,"college":{"collegeId":2,"collegeName":"SomeABC","collegeLocation":"ABC"},"studentJoinYear":"2023-10-26"}
-15:53:58 [http-nio-8080-exec-1] INFO  c.d.t.d.StudentDataValidation            -: "#" : {"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"studentName":{"type":"string","description":"name of the student","minLength":1},"studentLocation":{"type":"string","description":"native place of student","minLength":1},"graduated":{"type":"boolean","description":"Whether student is graduated or not"},"college":{"type":"object","properties":{"collegeId":{"type":"integer","description":"Uniquely represent the College"},"collegeName":{"type":"string","minLength":1},"collegeLocation":{"type":"string","minLength":1}},"required":["collegeId"]},"studentJoinYear":{"type":"string","format":"date","minLength":1,"description":"Joining data of student"}},"required":["studentName","studentLocation","graduated","college","studentJoinYear"]}
-15:53:58 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL                        -: select s1_0.student_id,s1_0.student_join_year,c1_0.college_id,c1_0.college_location,c1_0.college_name,s1_0.graduated,s1_0.student_location,s1_0.student_name from student s1_0 left join college c1_0 on c1_0.college_id=s1_0.college_id where s1_0.student_id=?
-15:53:59 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL                        -: update student set student_join_year=?,college_id=?,graduated=?,student_location=?,student_name=? where student_id=?
-15:53:59 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/octet-stream', given [*/*] and supported [*/*]
-15:53:59 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing ["Student with id 8 update successfully"]
-15:53:59 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 200 OK
-15:54:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet        -: GET "/student/getStudentById/8", parameters={}
-15:54:15 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.StudentController#getStudentById(Integer)
-15:54:15 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL                        -: select s1_0.student_id,s1_0.student_join_year,c1_0.college_id,c1_0.college_location,c1_0.college_name,s1_0.graduated,s1_0.student_location,s1_0.student_name from student s1_0 left join college c1_0 on c1_0.college_id=s1_0.college_id where s1_0.student_id=?
-15:54:15 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [application/json] and supported [application/json]
-15:54:15 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing [com.diatoz.task1.entity.StudentEntity@68c9715a]
-15:54:15 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 200 OK
-16:05:04 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s985ms856µs).
-10:07:27 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
-10:07:27 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 15908 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
-10:07:27 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
-10:07:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10:07:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 56 ms. Found 2 JPA repository interfaces.
-10:07:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
-10:07:28 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
-10:07:28 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
-10:07:28 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
-10:07:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
-10:07:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1686 ms
-10:07:29 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
-10:07:29 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
-10:07:29 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
-10:07:29 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-10:07:29 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
-10:07:29 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
-10:07:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48d44b46
-10:07:30 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
-10:07:30 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-10:07:30 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10:07:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
-10:07:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10:07:31 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration -: 
-
-Using generated security password: 48b0417c-a545-4fb0-af59-040d97c4a779
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-10:07:32 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4e58eda2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75f9a35a, org.springframework.security.web.context.SecurityContextHolderFilter@299615a5, org.springframework.security.web.header.HeaderWriterFilter@2e778abb, org.springframework.security.web.csrf.CsrfFilter@6cd8c373, org.springframework.security.web.authentication.logout.LogoutFilter@462deb2b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@109f95b1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@66be0e72, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7acbd3d0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36f1bd7e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b407ac7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@158b8d10, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49d5c751, org.springframework.security.web.access.ExceptionTranslationFilter@7f065f9e, org.springframework.security.web.access.intercept.AuthorizationFilter@251db193]
-10:07:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
-10:07:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
-10:07:32 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 5.299 seconds (process running for 6.024)
-10:07:46 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
-10:07:46 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
-10:07:46 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 2 ms
-10:09:55 [http-nio-8080-exec-8] INFO  c.d.t.controller.StudentController       -: User made a call to fetch the all Student
-10:12:03 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource          -: Init duration for springdoc-openapi is: 417 ms
-11:18:10 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
-11:18:10 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
-11:18:10 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
-11:18:15 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
-11:18:15 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 12848 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
-11:18:15 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
-11:18:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-11:18:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
-11:18:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
-11:18:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
-11:18:17 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
-11:18:17 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
-11:18:17 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
-11:18:17 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1754 ms
-11:18:17 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
-11:18:17 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
-11:18:17 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
-11:18:18 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-11:18:18 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
-11:18:18 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
-11:18:18 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e72fb04
-11:18:18 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
-11:18:19 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-11:18:19 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-11:18:19 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
-11:18:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-11:18:20 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@13f358f8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f119b55, org.springframework.security.web.context.SecurityContextHolderFilter@6e2e11ee, org.springframework.security.web.header.HeaderWriterFilter@54644470, org.springframework.security.web.csrf.CsrfFilter@149ef64a, org.springframework.security.web.authentication.logout.LogoutFilter@7ae75ba6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@376c5950, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@77350382, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@64dcfd09, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2f307fcc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b908c6d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29390110, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fefd4a2, org.springframework.security.web.access.ExceptionTranslationFilter@1235732d, org.springframework.security.web.access.intercept.AuthorizationFilter@568cbf8d]
-11:18:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
-11:18:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
-11:18:20 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 5.383 seconds (process running for 6.218)
-11:18:37 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
-11:18:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
-11:18:37 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 2 ms
-11:19:08 [http-nio-8080-exec-7] INFO  o.s.api.AbstractOpenApiResource          -: Init duration for springdoc-openapi is: 516 ms
-16:08:39 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m11s442ms221µs200ns).
-16:10:30 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
-16:10:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
-16:10:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
-16:10:36 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
-16:10:37 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 24068 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
-16:10:37 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
-16:10:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-16:10:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
-16:10:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
-16:10:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
-16:10:38 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
-16:10:38 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
-16:10:39 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
-16:10:39 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1950 ms
-16:10:39 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
-16:10:39 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
-16:10:39 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
-16:10:39 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-16:10:39 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
-16:10:39 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
-16:10:40 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22ff1372
-16:10:40 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
-16:10:40 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
-16:10:41 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-16:10:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
-16:10:42 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-16:10:42 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c4de811, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@443b9ebb, org.springframework.security.web.context.SecurityContextHolderFilter@732fa176, org.springframework.security.web.header.HeaderWriterFilter@7842260f, org.springframework.security.web.authentication.logout.LogoutFilter@6764201e, com.diatoz.task1.security.JwtAuthenticationFilter@1eb9a3ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c7b4a31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f83616, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4830c979, org.springframework.security.web.session.SessionManagementFilter@3811464b, org.springframework.security.web.access.ExceptionTranslationFilter@7a085d02, org.springframework.security.web.access.intercept.AuthorizationFilter@28721794]
-16:10:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
-16:10:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
-16:10:42 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 5.997 seconds (process running for 6.795)
-16:11:23 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
-16:11:23 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
-16:11:23 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 1 ms
-16:11:23 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-16:11:23 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-16:11:23 [http-nio-8080-exec-2] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:11:42 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-16:11:42 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-16:11:42 [http-nio-8080-exec-3] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:12:14 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-16:12:14 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-16:12:24 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-16:12:24 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-16:15:53 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-16:15:53 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-16:16:00 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-16:16:00 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-16:16:00 [http-nio-8080-exec-1] INFO  c.d.t.c.EntryPointController             -: UserDetails = org.springframework.security.core.userdetails.User [Username=abc, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_User]]
-16:18:36 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:18:50 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:19:59 [http-nio-8080-exec-9] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:19:59 [http-nio-8080-exec-9] INFO  c.d.t.controller.CollegeController       -: User made a call to fetch the all College
-16:20:10 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:20:43 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5Cs
-16:20:43 [http-nio-8080-exec-2] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:20:54 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:21:20 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:21:31 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:21:41 [http-nio-8080-exec-9] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:21:41 [http-nio-8080-exec-9] INFO  c.d.t.controller.CollegeController       -: User made a call to fetch the all College
-16:21:51 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5Cs
-16:21:51 [http-nio-8080-exec-10] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:21:56 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:21:56 [http-nio-8080-exec-1] INFO  c.d.t.controller.CollegeController       -: User made a call to fetch the all College
-16:28:25 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:28:25 [http-nio-8080-exec-3] INFO  c.d.t.controller.CollegeController       -: User made a call to fetch the all College
-16:28:31 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5Cs
-16:28:31 [http-nio-8080-exec-4] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:28:40 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:28:40 [http-nio-8080-exec-6] INFO  c.d.t.controller.CollegeController       -: User made a call to fetch the all College
-16:30:23 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-16:30:23 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-16:30:23 [http-nio-8080-exec-8] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:30:43 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:30:43 [http-nio-8080-exec-2] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:31:01 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:31:01 [http-nio-8080-exec-5] INFO  c.d.t.controller.CollegeController       -: User made a call to fetch the all College
-16:31:16 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5Cs
-16:31:16 [http-nio-8080-exec-3] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:31:25 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:31:25 [http-nio-8080-exec-4] INFO  c.d.t.controller.CollegeController       -: User made a call to fetch the all College
-16:39:07 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m56s684ms88µs600ns).
-16:45:20 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-16:45:20 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-16:45:20 [http-nio-8080-exec-8] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:46:15 [http-nio-8080-exec-9] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:46:16 [http-nio-8080-exec-9] INFO  c.d.t.controller.StudentController       -: Inside the Control classFri Jan 19 05:30:00 IST 2024
-16:46:16 [http-nio-8080-exec-9] INFO  c.d.t.controller.StudentController       -: {StudentJoinYear=student joining date cannot contain future date}
-16:49:47 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:49:47 [http-nio-8080-exec-1] INFO  c.d.t.controller.StudentController       -: Inside the Control classFri Jan 19 05:30:00 IST 2024
-16:49:47 [http-nio-8080-exec-1] INFO  c.d.t.controller.StudentController       -: {StudentJoinYear=student joining date cannot contain future date}
-16:50:24 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-16:50:24 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-16:50:24 [http-nio-8080-exec-5] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:50:46 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:50:46 [http-nio-8080-exec-3] INFO  c.d.t.controller.StudentController       -: Inside the Control classFri Jan 19 05:30:00 IST 2024
-16:50:46 [http-nio-8080-exec-3] INFO  c.d.t.controller.StudentController       -: {StudentJoinYear=student joining date cannot contain future date}
-16:52:52 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5Cs
-16:52:52 [http-nio-8080-exec-6] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-16:53:46 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer yJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-16:53:46 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -: Some changed has done in token !! Invalid Token
-16:53:46 [http-nio-8080-exec-7] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:25:48 [http-nio-8080-exec-9] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJpYXQiOjE2OTg2NjI3NjAsImV4cCI6MTY5ODY4MDc2MH0.2wK6Q-XVZF-ZHfL3DnmbvKN5nG4dV0_HSht7ESlA-fpcYDeMaMWwxmryya6xWVbtWie_JfJ--zCkDw3gE-5CsA
-17:25:48 [http-nio-8080-exec-9] INFO  c.d.t.controller.StudentController       -: Inside the Control classFri Jan 19 05:30:00 IST 2024
-17:25:48 [http-nio-8080-exec-9] INFO  c.d.t.controller.StudentController       -: {StudentJoinYear=student joining date cannot contain future date}
-17:30:27 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:30:27 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:30:27 [http-nio-8080-exec-1] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:30:28 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:30:28 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:30:28 [http-nio-8080-exec-2] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:31:19 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:31:19 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:31:19 [http-nio-8080-exec-5] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:31:19 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:31:19 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:31:19 [http-nio-8080-exec-3] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:31:33 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:31:33 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:31:33 [http-nio-8080-exec-6] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:31:33 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:31:33 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:31:33 [http-nio-8080-exec-7] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:31:43 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:31:43 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:31:43 [http-nio-8080-exec-8] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:31:43 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:31:43 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:31:43 [http-nio-8080-exec-10] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:33:31 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:33:31 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:33:31 [http-nio-8080-exec-2] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:33:32 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:33:32 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:33:32 [http-nio-8080-exec-5] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:33:46 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:33:46 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:33:46 [http-nio-8080-exec-3] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:33:46 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:33:46 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:33:46 [http-nio-8080-exec-4] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:34:27 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:34:27 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:34:27 [http-nio-8080-exec-6] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:34:27 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:34:27 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:34:27 [http-nio-8080-exec-7] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:34:47 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:34:47 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:34:47 [http-nio-8080-exec-1] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:34:47 [http-nio-8080-exec-9] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:34:47 [http-nio-8080-exec-9] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:34:47 [http-nio-8080-exec-9] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:36:36 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:36:36 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:36:36 [http-nio-8080-exec-3] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:36:36 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:36:36 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:36:36 [http-nio-8080-exec-4] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:36:55 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:36:55 [http-nio-8080-exec-8] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:36:55 [http-nio-8080-exec-8] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-17:36:55 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-17:36:55 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-17:36:55 [http-nio-8080-exec-10] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
-19:17:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
-19:17:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
-19:17:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+18:30:37 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+18:30:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+18:30:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+18:30:42 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+18:30:42 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 21148 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+18:30:42 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+18:30:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18:30:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 104 ms. Found 3 JPA repository interfaces.
+18:30:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+18:30:44 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+18:30:44 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+18:30:44 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+18:30:44 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+18:30:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1889 ms
+18:30:44 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+18:30:44 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+18:30:44 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+18:30:44 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+18:30:44 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+18:30:44 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+18:30:45 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@139089a4
+18:30:45 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+18:30:45 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+18:30:46 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:30:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+18:30:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18:30:47 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b68c59b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@326d39fd, org.springframework.security.web.context.SecurityContextHolderFilter@2e4262d2, org.springframework.security.web.header.HeaderWriterFilter@48064a5a, org.springframework.security.web.csrf.CsrfFilter@240c626d, org.springframework.security.web.authentication.logout.LogoutFilter@73ba3c4b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@64faf3d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@308d8de8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@403f6c04, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5b395ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@257e8c43, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49522bdf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2693e39c, org.springframework.security.web.access.ExceptionTranslationFilter@5889e697, org.springframework.security.web.access.intercept.AuthorizationFilter@b1d7b09]
+18:30:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+18:30:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+18:30:47 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 5.129 seconds (process running for 5.783)
+18:31:02 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:31:02 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+18:31:02 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 1 ms
+18:31:02 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /auth/getAllUser
+18:31:02 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+18:31:02 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache        -: Saved request http://localhost:8080/auth/getAllUser?continue to session
+18:31:02 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@61c644fe, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+18:31:02 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Match found! Executing org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint@534c3b9d
+18:31:02 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy        -: Redirecting to http://localhost:8080/login
+18:31:02 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /login
+18:31:02 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /favicon.ico
+18:31:02 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+18:31:02 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@61c644fe, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+18:31:02 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Match found! Executing org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint@534c3b9d
+18:31:02 [http-nio-8080-exec-3] DEBUG o.s.s.web.DefaultRedirectStrategy        -: Redirecting to http://localhost:8080/login
+18:31:02 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /login
+18:31:17 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /login
+18:31:17 [http-nio-8080-exec-5] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user Pratheesh 
+18:31:17 [http-nio-8080-exec-5] INFO  o.s.s.c.u.UserDetailsService             -: loaded user data is com.diatoz.task1.entity.AccountDetails@739fd593
+18:31:17 [http-nio-8080-exec-5] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+18:31:17 [http-nio-8080-exec-5] INFO  o.s.s.c.u.UserDetailsService             -: prath@123
+18:31:17 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]      -: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:289)
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:237)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:86)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:147)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:231)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:131)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+18:31:17 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /error
+18:31:17 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+18:31:17 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@61c644fe, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+18:31:17 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Match found! Executing org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint@534c3b9d
+18:31:17 [http-nio-8080-exec-5] DEBUG o.s.s.web.DefaultRedirectStrategy        -: Redirecting to http://localhost:8080/login
+18:31:17 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /login
+18:31:17 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /favicon.ico
+18:31:17 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+18:31:17 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@61c644fe, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+18:31:17 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Match found! Executing org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint@534c3b9d
+18:31:17 [http-nio-8080-exec-7] DEBUG o.s.s.web.DefaultRedirectStrategy        -: Redirecting to http://localhost:8080/login
+18:31:17 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /login
+18:31:29 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /login
+18:31:29 [http-nio-8080-exec-9] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user Pratheesh 
+18:31:29 [http-nio-8080-exec-9] INFO  o.s.s.c.u.UserDetailsService             -: loaded user data is com.diatoz.task1.entity.AccountDetails@4368ff67
+18:31:29 [http-nio-8080-exec-9] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+18:31:29 [http-nio-8080-exec-9] INFO  o.s.s.c.u.UserDetailsService             -: prath@123
+18:31:29 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]      -: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:289)
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:237)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:86)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:147)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:231)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:131)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+18:31:29 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /error
+18:31:29 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+18:31:29 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@61c644fe, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+18:31:29 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Match found! Executing org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint@534c3b9d
+18:31:29 [http-nio-8080-exec-9] DEBUG o.s.s.web.DefaultRedirectStrategy        -: Redirecting to http://localhost:8080/login
+18:31:29 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /login
+18:31:29 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /favicon.ico
+18:31:29 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+18:31:29 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@61c644fe, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+18:31:29 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint -: Match found! Executing org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint@534c3b9d
+18:31:29 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy        -: Redirecting to http://localhost:8080/login
+18:31:29 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /login
