@@ -1,8 +1,6 @@
 package com.diatoz.task1.exceptionHandler;
 
-import com.diatoz.task1.customException.DataNotProper;
-import com.diatoz.task1.customException.IdException;
-import com.diatoz.task1.customException.StudentDataException;
+import com.diatoz.task1.customException.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
@@ -42,6 +40,14 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(StudentDataException.class)
     public ResponseEntity<Map<String, String>> getStudentDataException(StudentDataException studentDataException) {
         return new ResponseEntity<>(studentDataException.getError(), HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(LoginDataException.class)
+    public ResponseEntity<Map<String, String>> getLoginDataException(LoginDataException loginDataException) {
+        return new ResponseEntity<>(loginDataException.getError(), HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler({PasswordException.class})
+    public ResponseEntity<String> getPassException(PasswordException passwordException) {
+        return new ResponseEntity<>(passwordException.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(Exception.class)
