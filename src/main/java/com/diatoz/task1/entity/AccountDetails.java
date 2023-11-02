@@ -4,28 +4,25 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
-import org.springframework.stereotype.Component;
 
 @Entity
-@Table(name="account")
+@Table(name = "account")
 public class AccountDetails {
 
     @Id
     @NotBlank(message = "{accountDetails.username.blank}")
-    @Length(min = 5,message = "{accountDetails.username.length}")
+    @Length(min = 5, message = "{accountDetails.username.length}")
     private String userName;
 
     @NotBlank(message = "{accountDetails.password.blank}")
     @Column(name = "password")
-    @Length(min= 6,message ="{accountDetails.password.min}" )
-    @Pattern(regexp = "^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]+$",message ="{accountDetails.password.pattern}" )
+    @Length(min = 6, message = "{accountDetails.password.min}")
+    @Pattern(regexp = "^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]+$", message = "{accountDetails.password.pattern}")
 
     private String passWord;
-
 
 
     public String getUserName() {

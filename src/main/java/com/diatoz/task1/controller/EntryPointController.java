@@ -15,18 +15,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -36,14 +33,11 @@ import java.util.Map;
 public class EntryPointController {
 
     @Autowired
+    LoginService loginService;
+    @Autowired
     private UserDetailsService userDetailsService;
-
     @Autowired
     private AuthenticationManager manager;
-
-    @Autowired
-    LoginService loginService;
-
     @Autowired
     private JwtHelper helper;
 
@@ -51,23 +45,22 @@ public class EntryPointController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<JwtResponse> login(@Validated @RequestBody JwtRequest request,BindingResult result) throws LoginDataException {
-        if((result.hasErrors()))
-        {
+    public ResponseEntity<JwtResponse> login(@Validated @RequestBody JwtRequest request, BindingResult result) throws LoginDataException {
+        if ((result.hasErrors())) {
             Map<String, String> errorMap = new HashMap<>();
             for (FieldError fieldError : result.getFieldErrors()) {
                 errorMap.put(fieldError.getField(), fieldError.getDefaultMessage());
             }
 
             logger.info(errorMap.toString());
-            throw  new LoginDataException(errorMap);
+            throw new LoginDataException(errorMap);
         }
 
         this.doAuthenticate(request.getUserName(), request.getPassword());
 
 
         UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUserName());
-        logger.info("UserDetails = {}",userDetails);
+        logger.info("UserDetails = {}", userDetails);
         String token = this.helper.generateToken(userDetails);
 
         JwtResponse response = new JwtResponse();
@@ -92,44 +85,44 @@ public class EntryPointController {
 
     }
 
-    @RequestMapping(value = "/create",method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> createAccount(@Validated @RequestBody AccountDetails accountDetails,BindingResult result) throws Exception {
-        if((result.hasErrors()))
-        {
+    @RequestMapping(value = "/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> createAccount(@Validated @RequestBody AccountDetails accountDetails, BindingResult result) throws Exception {
+        if ((result.hasErrors())) {
             Map<String, String> errorMap = new HashMap<>();
             for (FieldError fieldError : result.getFieldErrors()) {
                 errorMap.put(fieldError.getField(), fieldError.getDefaultMessage());
             }
 
             logger.info(errorMap.toString());
-            throw  new LoginDataException(errorMap);
+            throw new LoginDataException(errorMap);
         }
 
 
         return ResponseEntity.ok(loginService.createAccount(accountDetails));
     }
 
-    @RequestMapping(value = "/remove",method = RequestMethod.DELETE,consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> removeAccount(@Validated @RequestBody AccountDetails accountDetails,  BindingResult result) throws IdException, LoginDataException, PasswordException {
-        if((result.hasErrors()))
-        {
+    @RequestMapping(value = "/remove", method = RequestMethod.DELETE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> removeAccount(@Validated @RequestBody AccountDetails accountDetails, BindingResult result) throws IdException, LoginDataException, PasswordException {
+        if ((result.hasErrors())) {
             Map<String, String> errorMap = new HashMap<>();
             for (FieldError fieldError : result.getFieldErrors()) {
                 errorMap.put(fieldError.getField(), fieldError.getDefaultMessage());
             }
 
             logger.info(errorMap.toString());
-            throw  new LoginDataException(errorMap);
+            throw new LoginDataException(errorMap);
         }
 
 
         return ResponseEntity.ok(loginService.deleteAccount(accountDetails));
     }
-    @RequestMapping(value = "/getAllUser",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+
+    @RequestMapping(value = "/getAllUser", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<AccountDetails>> getAllAccount() {
         return ResponseEntity.ok(loginService.getAllUser());
 
     }
+
     @ExceptionHandler(BadCredentialsException.class)
     public String exceptionHandler() {
         return "Credentials Invalid !!";

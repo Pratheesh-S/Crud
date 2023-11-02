@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -48,16 +47,16 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 username = this.jwtHelper.getUsernameFromToken(token);
 
             } catch (IllegalArgumentException e) {
-                logger.info("Illegal Argument while fetching the username error = {} ",e.getMessage());
+                logger.info("Illegal Argument while fetching the username error = {} ", e.getMessage());
 
             } catch (ExpiredJwtException e) {
-                logger.info("Given jwt token is expired !! "+ e.getMessage() );
+                logger.info("Given jwt token is expired !! " + e.getMessage());
 
             } catch (MalformedJwtException e) {
-                logger.info("Some changed has done in token !! Invalid Token  {} " , e.getMessage());
+                logger.info("Some changed has done in token !! Invalid Token  {} ", e.getMessage());
 
             } catch (Exception e) {
-               logger.info("Unknown Exception occur = {}",e.getMessage());
+                logger.info("Unknown Exception occur = {}", e.getMessage());
 
             }
 

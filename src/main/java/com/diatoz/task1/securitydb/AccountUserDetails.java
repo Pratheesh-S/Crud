@@ -11,8 +11,8 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class AccountUserDetails implements UserDetails {
-    Logger logger = LoggerFactory.getLogger(UserDetails.class);
     private final AccountDetails accountDetails;
+    Logger logger = LoggerFactory.getLogger(UserDetails.class);
 
     public AccountUserDetails(AccountDetails accountDetails) {
         this.accountDetails = accountDetails;

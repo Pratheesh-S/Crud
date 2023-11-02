@@ -8,7 +8,7 @@ public class JwtRequest {
 
     @Id
     @NotBlank(message = "{accountDetails.username.blank}")
-    @Length(min = 5,message = "{accountDetails.username.length}")
+    @Length(min = 5, message = "{accountDetails.username.length}")
     String userName;
 
     @NotBlank(message = "{accountDetails.password.blank}")

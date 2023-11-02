@@ -41,10 +41,12 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, String>> getStudentDataException(StudentDataException studentDataException) {
         return new ResponseEntity<>(studentDataException.getError(), HttpStatus.BAD_REQUEST);
     }
+
     @ExceptionHandler(LoginDataException.class)
     public ResponseEntity<Map<String, String>> getLoginDataException(LoginDataException loginDataException) {
         return new ResponseEntity<>(loginDataException.getError(), HttpStatus.BAD_REQUEST);
     }
+
     @ExceptionHandler({PasswordException.class})
     public ResponseEntity<String> getPassException(PasswordException passwordException) {
         return new ResponseEntity<>(passwordException.getMessage(), HttpStatus.BAD_REQUEST);

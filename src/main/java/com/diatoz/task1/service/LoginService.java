@@ -8,7 +8,9 @@ import java.util.List;
 
 public interface LoginService {
     String createAccount(AccountDetails accountDetails) throws IdException;
+
     String deleteAccount(AccountDetails accountDetails) throws IdException, PasswordException;
+
     String updatePassword(AccountDetails accountDetails) throws IdException;
 
     List<AccountDetails> getAllUser();

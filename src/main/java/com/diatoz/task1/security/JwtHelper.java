@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,7 +36,7 @@ public class JwtHelper {
 
     public <T> T getClaimFromToken(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = getAllClaimsFromToken(token);
-        logger.info("Claims = {}",claims);
+        logger.info("Claims = {}", claims);
         return claimsResolver.apply(claims);
     }
 
@@ -49,7 +48,7 @@ public class JwtHelper {
     //check if the token has expired
     private Boolean isTokenExpired(String token) {
         final Date expiration = getExpirationDateFromToken(token);
-        logger.info("Expiration timen={}",expiration);
+        logger.info("Expiration timen={}", expiration);
         return expiration.before(new Date());
     }
 

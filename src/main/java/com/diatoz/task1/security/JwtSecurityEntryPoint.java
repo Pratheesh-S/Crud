@@ -17,6 +17,7 @@ import java.util.Map;
 @Component
 public class JwtSecurityEntryPoint implements AuthenticationEntryPoint {
     Logger logger = LoggerFactory.getLogger(JwtSecurityEntryPoint.class);
+
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -26,7 +27,7 @@ public class JwtSecurityEntryPoint implements AuthenticationEntryPoint {
         Map<String, String> errorResponse = new HashMap<>();
         errorResponse.put("error", "Authentication failed");
         errorResponse.put("message", authException.getMessage());
-        logger.error("message = {}",authException.getMessage());
+        logger.error("message = {}", authException.getMessage());
         response.getWriter().write(objectMapper.writeValueAsString(errorResponse));
 
     }

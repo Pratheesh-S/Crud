@@ -3,7 +3,6 @@ package com.diatoz.task1.config;
 
 import com.diatoz.task1.security.JwtAuthenticationFilter;
 import com.diatoz.task1.security.JwtSecurityEntryPoint;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,8 +23,8 @@ public class JwtConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable).cors(AbstractHttpConfigurer::disable)
-                 .authorizeHttpRequests(auth->auth.requestMatchers("/auth/*").permitAll().
-                         anyRequest().authenticated()).
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/*").permitAll().
+                        anyRequest().authenticated()).
                 exceptionHandling(ex -> ex.authenticationEntryPoint(point))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
