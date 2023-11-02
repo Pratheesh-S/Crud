@@ -43,4 +43,12 @@ public class AccountDetails {
     public void setPassWord(String passWord) {
         this.passWord = passWord;
     }
+
+    @Override
+    public String toString() {
+        return "AccountDetails{" +
+                "userName='" + userName + '\'' +
+                ", passWord='" + passWord + '\'' +
+                '}';
+    }
 }

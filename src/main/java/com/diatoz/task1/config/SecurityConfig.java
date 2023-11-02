@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
@@ -21,20 +22,13 @@ public class SecurityConfig {
     LoadUserAccountData loadUserAccountData;
 
 
-//    @Bean
-//    public UserDetailsService getUsersDetailsService()
-//    {
-//        UserDetails user1 = User.builder().username("Pratheesh").password(passwordEncoder().encode("1234")).roles("User").build();
-//        UserDetails user2 = User.builder().username("abc").password(passwordEncoder().encode("abc")).roles("User").build();
-//        return new InMemoryUserDetailsManager(user1,user2);
-//
-//    }
+
 
     @Bean
     public AuthenticationProvider authenticationProvider()
     {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-//        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
+        daoAuthenticationProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
         daoAuthenticationProvider.setUserDetailsService(loadUserAccountData);
         return daoAuthenticationProvider;
 

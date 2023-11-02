@@ -70,6 +70,7 @@ public class EntryPointController {
     private void doAuthenticate(String email, String password) {
 
         UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(email, password, Collections.singleton(new SimpleGrantedAuthority("USER")));
+
         logger.info("User data is inside  authentication method {}",authentication);
         try {
 
