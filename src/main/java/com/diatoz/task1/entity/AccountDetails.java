@@ -22,7 +22,7 @@ public class AccountDetails {
     @Length(min = 6, message = "{accountDetails.password.min}")
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]+$", message = "{accountDetails.password.pattern}")
 
-    private String passWord;
+    private String passeword;
 
 
     public String getUserName() {
@@ -34,18 +34,18 @@ public class AccountDetails {
     }
 
     public String getPassWord() {
-        return passWord;
+        return passeword;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassWord(String passeword) {
+        this.passeword = passeword;
     }
 
     @Override
     public String toString() {
         return "AccountDetails{" +
                 "userName='" + userName + '\'' +
-                ", passWord='" + passWord + '\'' +
+                ", passeword='" + passeword + '\'' +
                 '}';
     }
 }
