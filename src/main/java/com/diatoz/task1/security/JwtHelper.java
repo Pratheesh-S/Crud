@@ -4,9 +4,12 @@ package com.diatoz.task1.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
+import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,11 +17,12 @@ import java.util.function.Function;
 
 @Component
 public class JwtHelper {
-
     //requirement :
     public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
+    public final Logger logger = LoggerFactory.getLogger(JwtHelper.class);
 
     //    public static final long JWT_TOKEN_VALIDITY =  60;
+
     private final String secret = "afafasfafafasfasfasfafacasdasfasxASFACASDFACASDFASFASFDAFASFASDAADSCSDFADCVSGCFVADXCcadwavfsfarvf";
 
     //retrieve username from jwt token
@@ -33,6 +37,7 @@ public class JwtHelper {
 
     public <T> T getClaimFromToken(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = getAllClaimsFromToken(token);
+        logger.info("Claims = {}",claims);
         return claimsResolver.apply(claims);
     }
 
@@ -44,6 +49,7 @@ public class JwtHelper {
     //check if the token has expired
     private Boolean isTokenExpired(String token) {
         final Date expiration = getExpirationDateFromToken(token);
+        logger.info("Expiration timen={}",expiration);
         return expiration.before(new Date());
     }
 
