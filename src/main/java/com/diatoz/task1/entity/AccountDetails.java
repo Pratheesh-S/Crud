@@ -1,13 +1,15 @@
 package com.diatoz.task1.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "accountEntity")
 public class AccountDetails {
     @Id
     private String userName;
-    
+
     private String password;
 
     public String getUserName() {

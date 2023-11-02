@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AccountPassEncoder {
-    
+
     @Autowired
     PasswordEncoder passwordEncoder;
-    public AccountDetails encodePasswordAccount(AccountDetails accountDetails)
-    {
+
+    public AccountDetails encodePasswordAccount(AccountDetails accountDetails) {
         accountDetails.setPassword(passwordEncoder.encode(accountDetails.getPassword()));
         return accountDetails;
-        
+
     }
-    
+
 }

@@ -3,11 +3,9 @@ package com.diatoz.task1.controller;
 import com.diatoz.task1.customException.IdException;
 import com.diatoz.task1.customException.LoginDataException;
 import com.diatoz.task1.customException.PasswordException;
-import com.diatoz.task1.entity.AccountDetails;
 import com.diatoz.task1.model.AccountDetailsModel;
 import com.diatoz.task1.model.JwtRequest;
 import com.diatoz.task1.model.JwtResponse;
-import com.diatoz.task1.password.AccountPassEncoder;
 import com.diatoz.task1.security.JwtHelper;
 import com.diatoz.task1.service.LoginService;
 import org.slf4j.Logger;
@@ -21,7 +19,6 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
@@ -100,7 +97,6 @@ public class EntryPointController {
             logger.info(errorMap.toString());
             throw new LoginDataException(errorMap);
         }
-
 
 
         return ResponseEntity.ok(loginService.createAccount(accountDetailsModel));

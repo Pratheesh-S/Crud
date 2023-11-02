@@ -53,7 +53,7 @@ public class LoginServiceImpl implements LoginService {
 
         Optional<AccountDetails> dataFromDb = loginDao.findById(accountDetails.getUserName());
         if (dataFromDb.isPresent()) {
-            if (passwordEncoder.matches(accountDetails.getPassword(),dataFromDb.get().getPassword())) {
+            if (passwordEncoder.matches(accountDetails.getPassword(), dataFromDb.get().getPassword())) {
                 loginDao.deleteById(accountDetailsModel.getUserName());
                 return "Account Deleted Successfully for user with Username " + accountDetailsModel.getUserName();
             } else {
@@ -87,23 +87,21 @@ public class LoginServiceImpl implements LoginService {
         logger.info("Fetching the all the data");
         List<AccountDetails> allAccountDetails = loginDao.findAll();
         List<AccountDetailsModel> allAccountDetailsModel = new ArrayList<>();
-        for(AccountDetails accountDetails : allAccountDetails)
-        {
+        for (AccountDetails accountDetails : allAccountDetails) {
             allAccountDetailsModel.add(accountEntityToBean(accountDetails));
         }
         return allAccountDetailsModel;
     }
 
-    public AccountDetails accountBeanToEntity(AccountDetailsModel accountDetailsModel)
-    {
+    public AccountDetails accountBeanToEntity(AccountDetailsModel accountDetailsModel) {
         AccountDetails accountDetails = new AccountDetails();
-        BeanUtils.copyProperties(accountDetailsModel,accountDetails);
+        BeanUtils.copyProperties(accountDetailsModel, accountDetails);
         return accountDetails;
     }
-    public AccountDetailsModel accountEntityToBean(AccountDetails accountDetails)
-    {
+
+    public AccountDetailsModel accountEntityToBean(AccountDetails accountDetails) {
         AccountDetailsModel accountDetailsModel = new AccountDetailsModel();
-        BeanUtils.copyProperties(accountDetails,accountDetailsModel);
+        BeanUtils.copyProperties(accountDetails, accountDetailsModel);
         return accountDetailsModel;
     }
 }
