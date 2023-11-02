@@ -15,8 +15,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -51,7 +53,17 @@ public class EntryPointController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest request) {
+    public ResponseEntity<JwtResponse> login(@Validated @RequestBody JwtRequest request,BindingResult result) throws LoginDataException {
+        if((result.hasErrors()))
+        {
+            Map<String, String> errorMap = new HashMap<>();
+            for (FieldError fieldError : result.getFieldErrors()) {
+                errorMap.put(fieldError.getField(), fieldError.getDefaultMessage());
+            }
+
+            logger.info(errorMap.toString());
+            throw  new LoginDataException(errorMap);
+        }
 
         this.doAuthenticate(request.getUserName(), request.getPassword());
 
@@ -69,7 +81,7 @@ public class EntryPointController {
 
     private void doAuthenticate(String email, String password) {
 
-        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(email, password, Collections.singleton(new SimpleGrantedAuthority("USER")));
+        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(email, password, Collections.singleton(new SimpleGrantedAuthority("User")));
 
         logger.info("User data is inside  authentication method {}",authentication);
         try {

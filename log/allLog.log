@@ -1,59 +1,64 @@
-19:10:45 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
-19:10:45 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
-19:10:45 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 1 ms
-19:10:45 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
-19:10:45 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-19:10:45 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-19:10:45 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
-19:10:45 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
-19:10:45 [http-nio-8080-exec-2] INFO  c.d.t.c.EntryPointController             -: User data is inside  authentication method UsernamePasswordAuthenticationToken [Principal=Pratheesh, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[USER]]
-19:10:45 [http-nio-8080-exec-2] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user Pratheesh 
-19:10:45 [http-nio-8080-exec-2] INFO  o.s.s.c.u.UserDetailsService             -: loaded user data is AccountDetails{userName='Pratheesh', passWord='prath@123'}
-19:10:45 [http-nio-8080-exec-2] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
-19:10:45 [http-nio-8080-exec-2] INFO  o.s.s.c.u.UserDetailsService             -: prath@123
-19:10:45 [http-nio-8080-exec-2] INFO  c.d.t.c.EntryPointController             -: UserDetails = com.diatoz.task1.securitydb.AccountUserDetails@a79f1ec
-19:10:51 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
-19:10:51 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-19:10:51 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-19:10:51 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
-19:10:51 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
-19:10:51 [http-nio-8080-exec-3] INFO  c.d.t.c.EntryPointController             -: User data is inside  authentication method UsernamePasswordAuthenticationToken [Principal=Pratheesh, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[USER]]
-19:10:51 [http-nio-8080-exec-3] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user Pratheesh 
-19:10:51 [http-nio-8080-exec-3] INFO  o.s.s.c.u.UserDetailsService             -: loaded user data is AccountDetails{userName='Pratheesh', passWord='prath@123'}
-19:10:51 [http-nio-8080-exec-3] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
-19:10:51 [http-nio-8080-exec-3] INFO  o.s.s.c.u.UserDetailsService             -: prath@123
-19:10:51 [http-nio-8080-exec-3] INFO  c.d.t.c.EntryPointController             -: UserDetails = com.diatoz.task1.securitydb.AccountUserDetails@744ff6bc
-19:10:57 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
-19:10:57 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-19:10:57 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-19:10:57 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
-19:10:57 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
-19:10:57 [http-nio-8080-exec-4] INFO  c.d.t.c.EntryPointController             -: User data is inside  authentication method UsernamePasswordAuthenticationToken [Principal=Pratheeshs, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[USER]]
-19:10:57 [http-nio-8080-exec-4] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user Pratheeshs 
-19:10:57 [http-nio-8080-exec-4] ERROR o.s.s.c.u.UserDetailsService             -: Username is not found in database
-19:11:08 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
-19:11:08 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-19:11:08 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-19:11:08 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
-19:11:08 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
-19:11:08 [http-nio-8080-exec-5] INFO  c.d.t.c.EntryPointController             -: User data is inside  authentication method UsernamePasswordAuthenticationToken [Principal=Pratheesh, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[USER]]
-19:11:08 [http-nio-8080-exec-5] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user Pratheesh 
-19:11:08 [http-nio-8080-exec-5] INFO  o.s.s.c.u.UserDetailsService             -: loaded user data is AccountDetails{userName='Pratheesh', passWord='prath@123'}
-19:11:08 [http-nio-8080-exec-5] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
-19:11:08 [http-nio-8080-exec-5] INFO  o.s.s.c.u.UserDetailsService             -: prath@123
-19:11:08 [http-nio-8080-exec-5] INFO  c.d.t.c.EntryPointController             -: UserDetails = com.diatoz.task1.securitydb.AccountUserDetails@794adde3
-19:12:01 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
-19:12:01 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
-19:12:01 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
-19:12:01 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
-19:12:01 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
-19:12:01 [http-nio-8080-exec-6] INFO  c.d.t.c.EntryPointController             -: User data is inside  authentication method UsernamePasswordAuthenticationToken [Principal=Pratheesh, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[USER]]
-19:12:01 [http-nio-8080-exec-6] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user Pratheesh 
-19:12:01 [http-nio-8080-exec-6] INFO  o.s.s.c.u.UserDetailsService             -: loaded user data is AccountDetails{userName='Pratheesh', passWord='prath@123'}
-19:12:01 [http-nio-8080-exec-6] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
-19:12:01 [http-nio-8080-exec-6] INFO  o.s.s.c.u.UserDetailsService             -: prath@123
-19:12:01 [http-nio-8080-exec-6] INFO  c.d.t.c.EntryPointController             -: UserDetails = com.diatoz.task1.securitydb.AccountUserDetails@1422cb5f
-20:57:32 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h43m32s886ms309µs100ns).
-20:57:37 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
-20:57:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
-20:57:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+12:52:30 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:52:30 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected StandardServletMultipartResolver
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected AcceptHeaderLocaleResolver
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected FixedThemeResolver
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7a8e484b
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.support.SessionFlashMapManager@14af9f51
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+12:52:30 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 6 ms
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
+12:52:30 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+12:52:30 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#login(JwtRequest, BindingResult)
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/auth/login", parameters={}
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#login(JwtRequest, BindingResult)
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.model.JwtRequest@77b24844]
+12:52:30 [http-nio-8080-exec-2] INFO  c.d.t.c.EntryPointController             -: {password=Password cannot be a blank}
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#getLoginDataException(LoginDataException)
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing [{password=Password cannot be a blank}]
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [com.diatoz.task1.customException.LoginDataException]
+12:52:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
+12:52:39 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+12:52:39 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#login(JwtRequest, BindingResult)
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/auth/login", parameters={}
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#login(JwtRequest, BindingResult)
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.model.JwtRequest@50d99a40]
+12:52:39 [http-nio-8080-exec-4] INFO  c.d.t.c.EntryPointController             -: {userName=Username should contain min 5 character}
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#getLoginDataException(LoginDataException)
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing [{userName=Username should contain min 5 character}]
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [com.diatoz.task1.customException.LoginDataException]
+12:52:39 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#login(JwtRequest, BindingResult)
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/auth/login", parameters={}
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#login(JwtRequest, BindingResult)
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.model.JwtRequest@798c8a76]
+12:52:47 [http-nio-8080-exec-6] INFO  c.d.t.c.EntryPointController             -: User data is inside  authentication method UsernamePasswordAuthenticationToken [Principal=Pratheesh, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[User]]
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user Pratheesh 
+12:52:47 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL                        -: select a1_0.user_name,a1_0.password from account a1_0 where a1_0.user_name=?
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.s.c.u.UserDetailsService             -: loaded user data is AccountDetails{userName='Pratheesh', passWord='prath@123'}
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.s.c.u.UserDetailsService             -: prath@123
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider      -: Authenticated user
+12:52:47 [http-nio-8080-exec-6] INFO  c.d.t.c.EntryPointController             -: done with  authentication
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user Pratheesh 
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.s.c.u.UserDetailsService             -: loaded user data is AccountDetails{userName='Pratheesh', passWord='prath@123'}
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+12:52:47 [http-nio-8080-exec-6] INFO  o.s.s.c.u.UserDetailsService             -: prath@123
+12:52:47 [http-nio-8080-exec-6] INFO  c.d.t.c.EntryPointController             -: UserDetails = com.diatoz.task1.securitydb.AccountUserDetails@9ee6933
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing [com.diatoz.task1.model.JwtResponse@77f34c7]
+12:52:47 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 200 OK
