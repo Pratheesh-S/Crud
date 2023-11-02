@@ -3,7 +3,7 @@ package com.diatoz.task1.controller;
 import com.diatoz.task1.customException.IdException;
 import com.diatoz.task1.customException.LoginDataException;
 import com.diatoz.task1.customException.PasswordException;
-import com.diatoz.task1.entity.AccountDetails;
+import com.diatoz.task1.model.AccountDetailsModel;
 import com.diatoz.task1.model.JwtRequest;
 import com.diatoz.task1.model.JwtResponse;
 import com.diatoz.task1.security.JwtHelper;
@@ -40,6 +40,7 @@ public class EntryPointController {
     private AuthenticationManager manager;
     @Autowired
     private JwtHelper helper;
+
 
     private Logger logger = LoggerFactory.getLogger(EntryPointController.class);
 
@@ -86,7 +87,7 @@ public class EntryPointController {
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> createAccount(@Validated @RequestBody AccountDetails accountDetails, BindingResult result) throws Exception {
+    public ResponseEntity<String> createAccount(@Validated @RequestBody AccountDetailsModel accountDetailsModel, BindingResult result) throws Exception {
         if ((result.hasErrors())) {
             Map<String, String> errorMap = new HashMap<>();
             for (FieldError fieldError : result.getFieldErrors()) {
@@ -98,11 +99,11 @@ public class EntryPointController {
         }
 
 
-        return ResponseEntity.ok(loginService.createAccount(accountDetails));
+        return ResponseEntity.ok(loginService.createAccount(accountDetailsModel));
     }
 
     @RequestMapping(value = "/remove", method = RequestMethod.DELETE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> removeAccount(@Validated @RequestBody AccountDetails accountDetails, BindingResult result) throws IdException, LoginDataException, PasswordException {
+    public ResponseEntity<String> removeAccount(@Validated @RequestBody AccountDetailsModel accountDetailsModel, BindingResult result) throws IdException, LoginDataException, PasswordException {
         if ((result.hasErrors())) {
             Map<String, String> errorMap = new HashMap<>();
             for (FieldError fieldError : result.getFieldErrors()) {
@@ -114,11 +115,11 @@ public class EntryPointController {
         }
 
 
-        return ResponseEntity.ok(loginService.deleteAccount(accountDetails));
+        return ResponseEntity.ok(loginService.deleteAccount(accountDetailsModel));
     }
 
     @RequestMapping(value = "/getAllUser", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<AccountDetails>> getAllAccount() {
+    public ResponseEntity<List<AccountDetailsModel>> getAllAccount() {
         return ResponseEntity.ok(loginService.getAllUser());
 
     }
