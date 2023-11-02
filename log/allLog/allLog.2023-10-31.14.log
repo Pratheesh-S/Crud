@@ -1,0 +1,380 @@
+13:58:34 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:58:34 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected StandardServletMultipartResolver
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected AcceptHeaderLocaleResolver
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected FixedThemeResolver
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@531ed68e
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Detected org.springframework.web.servlet.support.SessionFlashMapManager@4a5eb613
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+13:58:34 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 4 ms
+13:58:34 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+13:58:34 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#createAccount(AccountDetails, BindingResult)
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#createAccount(AccountDetails, BindingResult)
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/auth/create", parameters={}
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#createAccount(AccountDetails, BindingResult)
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.entity.AccountDetails@379cd8c3]
+13:58:34 [http-nio-8080-exec-1] INFO  c.d.t.c.EntryPointController             -: {passWord=Password should contain least 1 digit and 1 special character (!@#$%^&*)}
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#getLoginDataException(LoginDataException)
+13:58:34 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+13:58:35 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing [{passWord=Password should contain least 1 digit and 1 special character (!@#$%^&*)}]
+13:58:35 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [com.diatoz.task1.customException.LoginDataException]
+13:58:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
+13:58:42 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+13:58:42 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#createAccount(AccountDetails, BindingResult)
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#createAccount(AccountDetails, BindingResult)
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/auth/create", parameters={}
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#createAccount(AccountDetails, BindingResult)
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.entity.AccountDetails@4d44bcd6]
+13:58:42 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL                        -: select a1_0.user_name,a1_0.password from account a1_0 where a1_0.user_name=?
+13:58:42 [http-nio-8080-exec-4] INFO  org.slf4j.LoggerFactory                  -:  Cannot create the account The User is already Present
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Using @ExceptionHandler com.diatoz.task1.exceptionHandler.GlobalExceptionHandler#showException(IdException)
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing ["Account with given Username  Already  present"]
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -: Resolved [com.diatoz.task1.customException.IdException: Account with given Username  Already  present]
+13:58:42 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 400 BAD_REQUEST
+13:58:52 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+13:58:52 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+13:58:52 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#createAccount(AccountDetails, BindingResult)
+13:58:52 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#createAccount(AccountDetails, BindingResult)
+13:58:52 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet        -: POST "/auth/create", parameters={}
+13:58:52 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -: Mapped to com.diatoz.task1.controller.EntryPointController#createAccount(AccountDetails, BindingResult)
+13:58:52 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -: Read "application/json;charset=UTF-8" to [com.diatoz.task1.entity.AccountDetails@3c034353]
+13:58:52 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL                        -: select a1_0.user_name,a1_0.password from account a1_0 where a1_0.user_name=?
+13:58:52 [http-nio-8080-exec-5] INFO  org.slf4j.LoggerFactory                  -: creating the account for the 
+13:58:52 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL                        -: select a1_0.user_name,a1_0.password from account a1_0 where a1_0.user_name=?
+13:58:52 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL                        -: insert into account (password,user_name) values (?,?)
+13:58:52 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+13:58:52 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor  -: Writing ["Account created Successfully for user with Username Pratheesh S"]
+13:58:52 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet        -: Completed 200 OK
+14:55:20 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m34s816ms621µs).
+15:38:25 [SpringApplicationShutdownHook] DEBUG o.s.b.a.ApplicationAvailabilityBean      -: Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+15:38:25 [SpringApplicationShutdownHook] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -: Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42bc14c1, started on Tue Oct 31 13:57:11 IST 2023
+15:38:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+15:38:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+15:38:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+15:38:32 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+15:38:32 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 10012 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+15:38:32 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+15:38:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:38:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
+15:38:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+15:38:34 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+15:38:34 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+15:38:34 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+15:38:34 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+15:38:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1749 ms
+15:38:34 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+15:38:34 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+15:38:34 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+15:38:35 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:38:35 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+15:38:35 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+15:38:35 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10166230
+15:38:35 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+15:38:35 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:38:36 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:38:36 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:38:37 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:38:37 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/diatoz/task1/config/JwtConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: Can't configure mvcMatchers after anyRequest
+15:38:37 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+15:38:37 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+15:38:37 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+15:38:37 [main] INFO  o.a.catalina.core.StandardService        -: Stopping service [Tomcat]
+15:38:37 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger -: 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+15:38:37 [main] ERROR o.s.boot.SpringApplication               -: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/diatoz/task1/config/JwtConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: Can't configure mvcMatchers after anyRequest
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:654)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.diatoz.task1.Task1Application.main(Task1Application.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: Can't configure mvcMatchers after anyRequest
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalStateException: Can't configure mvcMatchers after anyRequest
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.createMvcMatchers(AbstractRequestMatcherRegistry.java:105)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:210)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:276)
+	at com.diatoz.task1.config.JwtConfig.lambda$securityFilterChain$3(JwtConfig.java:33)
+	at org.springframework.security.config.annotation.web.builders.HttpSecurity.authorizeHttpRequests(HttpSecurity.java:1466)
+	at com.diatoz.task1.config.JwtConfig.securityFilterChain(JwtConfig.java:33)
+	at com.diatoz.task1.config.JwtConfig$$SpringCGLIB$$0.CGLIB$securityFilterChain$0(<generated>)
+	at com.diatoz.task1.config.JwtConfig$$SpringCGLIB$$2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.diatoz.task1.config.JwtConfig$$SpringCGLIB$$0.securityFilterChain(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 20 common frames omitted
+15:39:19 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+15:39:19 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 10092 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+15:39:19 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+15:39:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:39:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 78 ms. Found 3 JPA repository interfaces.
+15:39:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+15:39:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+15:39:20 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+15:39:20 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+15:39:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+15:39:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1444 ms
+15:39:21 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+15:39:21 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+15:39:21 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+15:39:21 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:39:21 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+15:39:21 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+15:39:21 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d7b4e04
+15:39:21 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+15:39:21 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:39:22 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:39:22 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:39:22 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:39:23 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/diatoz/task1/config/JwtConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: Can't configure mvcMatchers after anyRequest
+15:39:23 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+15:39:23 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+15:39:23 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+15:39:23 [main] INFO  o.a.catalina.core.StandardService        -: Stopping service [Tomcat]
+15:39:23 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger -: 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+15:39:23 [main] ERROR o.s.boot.SpringApplication               -: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/diatoz/task1/config/JwtConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: Can't configure mvcMatchers after anyRequest
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:654)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.diatoz.task1.Task1Application.main(Task1Application.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: Can't configure mvcMatchers after anyRequest
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalStateException: Can't configure mvcMatchers after anyRequest
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.createMvcMatchers(AbstractRequestMatcherRegistry.java:105)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:210)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:276)
+	at com.diatoz.task1.config.JwtConfig.lambda$securityFilterChain$3(JwtConfig.java:32)
+	at org.springframework.security.config.annotation.web.builders.HttpSecurity.authorizeHttpRequests(HttpSecurity.java:1466)
+	at com.diatoz.task1.config.JwtConfig.securityFilterChain(JwtConfig.java:32)
+	at com.diatoz.task1.config.JwtConfig$$SpringCGLIB$$0.CGLIB$securityFilterChain$0(<generated>)
+	at com.diatoz.task1.config.JwtConfig$$SpringCGLIB$$2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.diatoz.task1.config.JwtConfig$$SpringCGLIB$$0.securityFilterChain(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 20 common frames omitted
+15:40:06 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+15:40:07 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 14116 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+15:40:07 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+15:40:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:40:07 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+15:40:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+15:40:08 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+15:40:08 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+15:40:08 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+15:40:08 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+15:40:08 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1535 ms
+15:40:08 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+15:40:08 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+15:40:08 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+15:40:09 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:40:09 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+15:40:09 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+15:40:09 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@356341c9
+15:40:09 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+15:40:09 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:40:10 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:40:10 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:40:10 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:40:11 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/diatoz/task1/config/JwtConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: Can't configure mvcMatchers after anyRequest
+15:40:11 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+15:40:11 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+15:40:11 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+15:40:11 [main] INFO  o.a.catalina.core.StandardService        -: Stopping service [Tomcat]
+15:40:11 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger -: 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+15:40:11 [main] ERROR o.s.boot.SpringApplication               -: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/diatoz/task1/config/JwtConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: Can't configure mvcMatchers after anyRequest
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:654)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:642)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.diatoz.task1.Task1Application.main(Task1Application.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'securityFilterChain' threw exception with message: Can't configure mvcMatchers after anyRequest
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalStateException: Can't configure mvcMatchers after anyRequest
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.createMvcMatchers(AbstractRequestMatcherRegistry.java:105)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:210)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:276)
+	at com.diatoz.task1.config.JwtConfig.lambda$securityFilterChain$3(JwtConfig.java:31)
+	at org.springframework.security.config.annotation.web.builders.HttpSecurity.authorizeHttpRequests(HttpSecurity.java:1466)
+	at com.diatoz.task1.config.JwtConfig.securityFilterChain(JwtConfig.java:31)
+	at com.diatoz.task1.config.JwtConfig$$SpringCGLIB$$0.CGLIB$securityFilterChain$0(<generated>)
+	at com.diatoz.task1.config.JwtConfig$$SpringCGLIB$$2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.diatoz.task1.config.JwtConfig$$SpringCGLIB$$0.securityFilterChain(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 20 common frames omitted
+15:51:44 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+15:51:44 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 21712 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+15:51:44 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+15:51:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:51:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+15:51:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+15:51:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+15:51:46 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+15:51:46 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+15:51:46 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+15:51:46 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1840 ms
+15:51:46 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+15:51:47 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+15:51:47 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+15:51:47 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:51:47 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+15:51:47 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+15:51:47 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d7b4e04
+15:51:47 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+15:51:48 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+15:51:48 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:51:48 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:51:49 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:51:49 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ec729be, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f7da3a2, org.springframework.security.web.context.SecurityContextHolderFilter@5825932c, org.springframework.security.web.header.HeaderWriterFilter@5fdff4f1, org.springframework.security.web.authentication.logout.LogoutFilter@3b8c15de, com.diatoz.task1.security.JwtAuthenticationFilter@157d3a45, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@321c01c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@628cb8e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24ea71d, org.springframework.security.web.session.SessionManagementFilter@45775a15, org.springframework.security.web.access.ExceptionTranslationFilter@5e0b7f58, org.springframework.security.web.access.intercept.AuthorizationFilter@5b7d5eca]
+15:51:49 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+15:51:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+15:51:50 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 5.684 seconds (process running for 6.286)
+15:53:24 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:53:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+15:53:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 1 ms
+15:53:24 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+15:53:24 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+16:08:41 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s8ms119µs).
+16:23:24 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+16:23:24 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+16:23:24 [http-nio-8080-exec-4] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
+16:24:55 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+16:24:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+16:24:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+16:25:01 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+16:25:01 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 21404 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+16:25:01 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+16:25:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:25:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+16:25:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+16:25:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+16:25:03 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+16:25:03 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:25:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+16:25:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1858 ms
+16:25:03 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+16:25:03 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+16:25:03 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+16:25:03 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+16:25:03 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+16:25:03 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+16:25:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6dc2279c
+16:25:04 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+16:25:04 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+16:25:05 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:25:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:25:05 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:25:06 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76055d02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31c800a5, org.springframework.security.web.context.SecurityContextHolderFilter@d5eca06, org.springframework.security.web.header.HeaderWriterFilter@78de0f6f, org.springframework.security.web.authentication.logout.LogoutFilter@401b7226, com.diatoz.task1.security.JwtAuthenticationFilter@750ed637, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@304cad3a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@171b0d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@130ad58d, org.springframework.security.web.session.SessionManagementFilter@5825932c, org.springframework.security.web.access.ExceptionTranslationFilter@117be84a, org.springframework.security.web.access.intercept.AuthorizationFilter@7ec729be]
+16:25:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+16:25:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+16:25:06 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 5.711 seconds (process running for 6.302)
+16:25:18 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:25:18 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+16:25:18 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 1 ms
+16:25:18 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+16:25:18 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+16:25:18 [http-nio-8080-exec-2] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
+16:26:27 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+16:26:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+16:26:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+16:26:31 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+16:26:31 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 6704 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+16:26:31 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+16:26:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:26:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+16:26:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+16:26:33 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+16:26:33 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+16:26:33 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:26:33 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+16:26:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 1816 ms
+16:26:33 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+16:26:33 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+16:26:33 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+16:26:34 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+16:26:34 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+16:26:34 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+16:26:34 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24615687
+16:26:34 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+16:26:34 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+16:26:35 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:26:35 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:26:36 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:26:36 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31c800a5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@130ad58d, org.springframework.security.web.context.SecurityContextHolderFilter@79169472, org.springframework.security.web.header.HeaderWriterFilter@588614f9, org.springframework.security.web.authentication.logout.LogoutFilter@1b62ad1e, com.diatoz.task1.security.JwtAuthenticationFilter@2b73bd6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@628cb8e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63d43a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@648bfebe, org.springframework.security.web.session.SessionManagementFilter@277dddcf, org.springframework.security.web.access.ExceptionTranslationFilter@140fa482, org.springframework.security.web.access.intercept.AuthorizationFilter@4f7da3a2]
+16:26:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+16:26:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+16:26:37 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 5.696 seconds (process running for 6.269)
