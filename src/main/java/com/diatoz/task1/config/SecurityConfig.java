@@ -16,14 +16,12 @@ public class SecurityConfig {
     @Autowired
     LoadUserAccountData loadUserAccountData;
 
-
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
         daoAuthenticationProvider.setUserDetailsService(loadUserAccountData);
         return daoAuthenticationProvider;
-
     }
 
     @Bean
