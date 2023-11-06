@@ -10,13 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @GetMapping("/admin")
-    public ResponseEntity<String> testAdmin()
-    {
+    public ResponseEntity<String> testAdmin() {
         return ResponseEntity.ok("admin is accessing");
     }
+
     @GetMapping("/user")
-    public ResponseEntity<String> testUser()
-    {
+    public ResponseEntity<String> testUser() {
         return ResponseEntity.ok("user is accessing");
     }
 }

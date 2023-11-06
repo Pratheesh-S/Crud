@@ -6,14 +6,12 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 @Component
 public class JwtHelper {
@@ -41,8 +39,7 @@ public class JwtHelper {
         return claimsResolver.apply(claims);
     }
 
-    public List<SimpleGrantedAuthority> getAuthority(String token)
-    {
+    public List<SimpleGrantedAuthority> getAuthority(String token) {
         final Claims claims = getAllClaimsFromToken(token);
         Object data = claims.get("roles");
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
@@ -55,7 +52,7 @@ public class JwtHelper {
                 }
             }
         }
-        logger.info("data of authorities {}",authorities);
+        logger.info("data of authorities {}", authorities);
 
 
         return authorities;
@@ -77,7 +74,7 @@ public class JwtHelper {
     //generate token for user
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("roles",userDetails.getAuthorities());
+        claims.put("roles", userDetails.getAuthorities());
         return doGenerateToken(claims, userDetails.getUsername());
     }
 
@@ -96,7 +93,7 @@ public class JwtHelper {
     //validate token
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = getUsernameFromToken(token);
-        return (username.equals(userDetails.getUsername())  && !isTokenExpired(token));
+        return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
 //    private boolean checkTheAuthority(Collection<? extends GrantedAuthority> authorities, List<SimpleGrantedAuthority> authority) {

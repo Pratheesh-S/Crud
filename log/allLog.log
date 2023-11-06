@@ -2556,3 +2556,355 @@ Caused by: java.lang.IllegalStateException: Can't configure mvcMatchers after an
 15:35:04 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -: Authentication details : UsernamePasswordAuthenticationToken [Principal=com.diatoz.task1.securitydb.AccountUserDetails@413a4124, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER, ROLE_ADMIN]]
 15:35:04 [http-nio-8080-exec-10] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
 15:35:04 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy        -: Secured GET /student/admin/getStudentById/1
+16:01:28 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+16:01:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+16:01:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+16:01:36 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+16:01:37 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 6376 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+16:01:37 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+16:01:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:01:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+16:01:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+16:01:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+16:01:39 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+16:01:39 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:01:39 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+16:01:39 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 2524 ms
+16:01:39 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+16:01:39 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+16:01:39 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+16:01:40 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+16:01:40 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+16:01:40 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+16:01:40 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@350567f1
+16:01:40 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+16:01:41 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+16:01:42 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:01:42 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:01:43 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:01:43 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@57fb6900, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1eda853f, org.springframework.security.web.context.SecurityContextHolderFilter@52c68925, org.springframework.security.web.header.HeaderWriterFilter@2c6553c6, org.springframework.security.web.authentication.logout.LogoutFilter@4a2f1ae3, com.diatoz.task1.security.JwtAuthenticationFilter@43aa767, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65a01901, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@342a5b57, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f0751b0, org.springframework.security.web.session.SessionManagementFilter@5319efc0, org.springframework.security.web.access.ExceptionTranslationFilter@58829c2c, org.springframework.security.web.access.intercept.AuthorizationFilter@1e9afe4e]
+16:01:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+16:01:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+16:01:43 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 7.345 seconds (process running for 8.621)
+16:01:51 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 1 ms
+16:01:51 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+16:01:51 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+16:01:51 [http-nio-8080-exec-2] DEBUG o.s.s.w.s.SessionManagementFilter        -: Request requested invalid session id 6E976CCB31A5CB3DB03AC2FA5340C10E
+16:01:51 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath1 
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$0ke/K4gbJew6uEZlX5p0zOh8Koiy9UMrHDpriSskBtbyCHYYuGhby
+16:01:51 [http-nio-8080-exec-2] DEBUG o.s.s.a.d.DaoAuthenticationProvider      -: Authenticated user
+16:01:51 [http-nio-8080-exec-2] INFO  c.d.t.c.EntryPointController             -: done with  authentication
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath1 
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+16:01:51 [http-nio-8080-exec-2] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$0ke/K4gbJew6uEZlX5p0zOh8Koiy9UMrHDpriSskBtbyCHYYuGhby
+16:01:51 [http-nio-8080-exec-2] INFO  c.d.t.c.EntryPointController             -: UserDetails = com.diatoz.task1.securitydb.AccountUserDetails@2d1c9d0e
+16:02:14 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /student/admin/getStudentById/1
+16:02:14 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer yJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwcmF0aDEiLCJpYXQiOjE2OTkyNjY3MTEsImV4cCI6MTY5OTI4NDcxMX0.i7LfaWLdnKcl2J6HCYziavfkBjyvw4y0N0qUPRJ1sBJ_tHfZroJ8x9z1azds370R-TaTy2Nj-EWc03CotY-o5g
+16:02:14 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Some changed has done in token !! Invalid Token  Malformed JWT JSON: Ș[Ȏ���LL�� 
+16:02:14 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+16:02:14 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+16:02:14 [http-nio-8080-exec-3] DEBUG o.s.s.w.s.SessionManagementFilter        -: Request requested invalid session id 6E976CCB31A5CB3DB03AC2FA5340C10E
+16:02:14 [http-nio-8080-exec-3] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
+16:02:49 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /student/admin/getStudentById/1
+16:02:49 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwcmF0aDEiLCJpYXQiOjE2OTkyNjY3MTEsImV4cCI6MTY5OTI4NDcxMX0.i7LfaWLdnKcl2J6HCYziavfkBjyvw4y0N0qUPRJ1sBJ_tHfZroJ8x9z1azds370R-TaTy2Nj-EWc03CotY-o5g
+16:02:49 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {sub=prath1, iat=1699266711, exp=1699284711}
+16:02:49 [http-nio-8080-exec-4] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath1 
+16:02:49 [http-nio-8080-exec-4] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+16:02:49 [http-nio-8080-exec-4] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$0ke/K4gbJew6uEZlX5p0zOh8Koiy9UMrHDpriSskBtbyCHYYuGhby
+16:02:49 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {sub=prath1, iat=1699266711, exp=1699284711}
+16:02:49 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {sub=prath1, iat=1699266711, exp=1699284711}
+16:02:49 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Expiration timen=Mon Nov 06 21:01:51 IST 2023
+16:02:49 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: current Thread Thread[#43,http-nio-8080-exec-4,5,main]
+16:02:49 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Authentication details : UsernamePasswordAuthenticationToken [Principal=com.diatoz.task1.securitydb.AccountUserDetails@5cb0b995, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER, ROLE_ADMIN]]
+16:02:49 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+16:02:49 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Secured GET /student/admin/getStudentById/1
+16:02:53 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /college/user/getCollege
+16:02:53 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn0seyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn1dLCJzdWIiOiJwcmF0aDEiLCJpYXQiOjE2OTkyNjQ0OTQsImV4cCI6MTY5OTI4MjQ5NH0.MpiDiucxufCG4EjbPqcfYIlZxnHqi9CtURyQp7i2gWRoipexSN8mL8tL26dy9vPm9mrtCTilb2HvmuONmwCp1w
+16:02:53 [http-nio-8080-exec-5] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_USER}, {authority=ROLE_ADMIN}], sub=prath1, iat=1699264494, exp=1699282494}
+16:02:53 [http-nio-8080-exec-5] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath1 
+16:02:53 [http-nio-8080-exec-5] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+16:02:53 [http-nio-8080-exec-5] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$0ke/K4gbJew6uEZlX5p0zOh8Koiy9UMrHDpriSskBtbyCHYYuGhby
+16:02:53 [http-nio-8080-exec-5] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_USER}, {authority=ROLE_ADMIN}], sub=prath1, iat=1699264494, exp=1699282494}
+16:02:53 [http-nio-8080-exec-5] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_USER}, {authority=ROLE_ADMIN}], sub=prath1, iat=1699264494, exp=1699282494}
+16:02:53 [http-nio-8080-exec-5] INFO  com.diatoz.task1.security.JwtHelper      -: Expiration timen=Mon Nov 06 20:24:54 IST 2023
+16:02:53 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: current Thread Thread[#44,http-nio-8080-exec-5,5,main]
+16:02:53 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: Authentication details : UsernamePasswordAuthenticationToken [Principal=com.diatoz.task1.securitydb.AccountUserDetails@656baf25, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER, ROLE_ADMIN]]
+16:02:53 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+16:02:53 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy        -: Secured GET /college/user/getCollege
+16:02:53 [http-nio-8080-exec-5] INFO  c.d.t.controller.CollegeController       -: User made a call to fetch the all College
+16:03:08 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+16:03:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+16:03:08 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+16:03:13 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+16:03:13 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 4852 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+16:03:13 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+16:03:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:03:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 94 ms. Found 3 JPA repository interfaces.
+16:03:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+16:03:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+16:03:15 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+16:03:15 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+16:03:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+16:03:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 2047 ms
+16:03:15 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+16:03:15 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+16:03:15 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+16:03:16 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+16:03:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+16:03:16 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+16:03:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34b2d51a
+16:03:16 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+16:03:16 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+16:03:17 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:03:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:03:18 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:03:18 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f0751b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3984e2b3, org.springframework.security.web.context.SecurityContextHolderFilter@65a01901, org.springframework.security.web.header.HeaderWriterFilter@1503f434, org.springframework.security.web.authentication.logout.LogoutFilter@6a887649, com.diatoz.task1.security.JwtAuthenticationFilter@14745c3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77e64a46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b89debc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35bb3fea, org.springframework.security.web.session.SessionManagementFilter@3618486e, org.springframework.security.web.access.ExceptionTranslationFilter@2c6553c6, org.springframework.security.web.access.intercept.AuthorizationFilter@5b8ba1d2]
+16:03:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+16:03:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+16:03:19 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 5.958 seconds (process running for 6.808)
+16:05:12 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:05:12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+16:05:12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 1 ms
+16:05:13 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
+16:05:13 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+16:05:13 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+16:05:13 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+16:05:13 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+16:05:13 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter        -: Request requested invalid session id 6E976CCB31A5CB3DB03AC2FA5340C10E
+16:05:13 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
+16:05:13 [http-nio-8080-exec-1] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath 
+16:05:13 [http-nio-8080-exec-1] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+16:05:13 [http-nio-8080-exec-1] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$PFo0W9FKswS2mFpIbBRk0OWURFbU6sDfMmNoFyyvc1hv.gGZj.Az6
+16:05:13 [http-nio-8080-exec-1] DEBUG o.s.s.a.d.DaoAuthenticationProvider      -: Authenticated user
+16:05:13 [http-nio-8080-exec-1] INFO  c.d.t.c.EntryPointController             -: done with  authentication
+16:05:13 [http-nio-8080-exec-1] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath 
+16:05:13 [http-nio-8080-exec-1] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+16:05:13 [http-nio-8080-exec-1] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$PFo0W9FKswS2mFpIbBRk0OWURFbU6sDfMmNoFyyvc1hv.gGZj.Az6
+16:05:13 [http-nio-8080-exec-1] INFO  c.d.t.c.EntryPointController             -: UserDetails = com.diatoz.task1.securitydb.AccountUserDetails@3186b9e4
+16:05:44 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /test/user
+16:05:44 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoicHJhdGgiLCJpYXQiOjE2OTkyNjY5MTMsImV4cCI6MTY5OTI4NDkxM30.5zgJRSDfwaUKM8eeN9x7Ah8WMZu_DxgzsvR4hJj8q6tiVGUIzwYfwFY1CgIFBbqeZrmLE0aRRHlD3wuOYY4peQ
+16:05:44 [http-nio-8080-exec-3] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_ADMIN}], sub=prath, iat=1699266913, exp=1699284913}
+16:05:44 [http-nio-8080-exec-3] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath 
+16:05:44 [http-nio-8080-exec-3] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+16:05:44 [http-nio-8080-exec-3] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$PFo0W9FKswS2mFpIbBRk0OWURFbU6sDfMmNoFyyvc1hv.gGZj.Az6
+16:05:44 [http-nio-8080-exec-3] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_ADMIN}], sub=prath, iat=1699266913, exp=1699284913}
+16:05:44 [http-nio-8080-exec-3] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_ADMIN}], sub=prath, iat=1699266913, exp=1699284913}
+16:05:44 [http-nio-8080-exec-3] INFO  com.diatoz.task1.security.JwtHelper      -: Expiration timen=Mon Nov 06 21:05:13 IST 2023
+16:05:44 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: current Thread Thread[#42,http-nio-8080-exec-3,5,main]
+16:05:44 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Authentication details : UsernamePasswordAuthenticationToken [Principal=com.diatoz.task1.securitydb.AccountUserDetails@4b8e3b2d, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+16:05:44 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+16:05:44 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl        -: Responding with 403 status code
+16:05:44 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /error
+16:05:44 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+16:05:44 [http-nio-8080-exec-3] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
+16:05:52 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /test/admin
+16:05:52 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoicHJhdGgiLCJpYXQiOjE2OTkyNjY5MTMsImV4cCI6MTY5OTI4NDkxM30.5zgJRSDfwaUKM8eeN9x7Ah8WMZu_DxgzsvR4hJj8q6tiVGUIzwYfwFY1CgIFBbqeZrmLE0aRRHlD3wuOYY4peQ
+16:05:52 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_ADMIN}], sub=prath, iat=1699266913, exp=1699284913}
+16:05:52 [http-nio-8080-exec-4] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath 
+16:05:52 [http-nio-8080-exec-4] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+16:05:52 [http-nio-8080-exec-4] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$PFo0W9FKswS2mFpIbBRk0OWURFbU6sDfMmNoFyyvc1hv.gGZj.Az6
+16:05:52 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_ADMIN}], sub=prath, iat=1699266913, exp=1699284913}
+16:05:52 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_ADMIN}], sub=prath, iat=1699266913, exp=1699284913}
+16:05:52 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Expiration timen=Mon Nov 06 21:05:13 IST 2023
+16:05:52 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: current Thread Thread[#43,http-nio-8080-exec-4,5,main]
+16:05:52 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Authentication details : UsernamePasswordAuthenticationToken [Principal=com.diatoz.task1.securitydb.AccountUserDetails@6ccc106c, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+16:05:52 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+16:05:52 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Secured GET /test/admin
+17:42:32 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /auth/getAllUser
+17:42:32 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+17:42:32 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+17:42:32 [http-nio-8080-exec-7] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+17:42:32 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+17:42:32 [http-nio-8080-exec-7] DEBUG o.s.s.w.s.SessionManagementFilter        -: Request requested invalid session id 6E976CCB31A5CB3DB03AC2FA5340C10E
+17:42:32 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy        -: Secured GET /auth/getAllUser
+17:42:33 [http-nio-8080-exec-7] INFO  org.slf4j.LoggerFactory                  -: Fetching the all the data
+17:44:30 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+17:44:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+17:44:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+17:44:36 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+17:44:36 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 22308 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+17:44:36 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+17:44:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:44:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 91 ms. Found 3 JPA repository interfaces.
+17:44:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+17:44:38 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+17:44:38 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+17:44:38 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+17:44:38 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+17:44:38 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 2310 ms
+17:44:39 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+17:44:39 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+17:44:39 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+17:44:39 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+17:44:39 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+17:44:40 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+17:44:40 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6dc2279c
+17:44:40 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+17:44:40 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+17:44:41 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:44:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:44:42 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:44:42 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3420547, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44d36b56, org.springframework.security.web.context.SecurityContextHolderFilter@44bb6856, org.springframework.security.web.header.HeaderWriterFilter@122a6078, org.springframework.security.web.authentication.logout.LogoutFilter@51158fb1, com.diatoz.task1.security.JwtAuthenticationFilter@3b28ab9b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57d0c779, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72ae1007, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ce1cc03, org.springframework.security.web.session.SessionManagementFilter@74471600, org.springframework.security.web.access.ExceptionTranslationFilter@106c73ed, org.springframework.security.web.access.intercept.AuthorizationFilter@4250b0c1]
+17:44:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+17:44:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+17:44:43 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 7.254 seconds (process running for 8.228)
+17:44:45 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:44:45 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+17:44:45 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 4 ms
+17:44:45 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/login
+17:44:45 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+17:44:45 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+17:44:45 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+17:44:45 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+17:44:45 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter        -: Request requested invalid session id 6E976CCB31A5CB3DB03AC2FA5340C10E
+17:44:45 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/login
+17:44:46 [http-nio-8080-exec-1] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath 
+17:44:46 [http-nio-8080-exec-1] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+17:44:46 [http-nio-8080-exec-1] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$PFo0W9FKswS2mFpIbBRk0OWURFbU6sDfMmNoFyyvc1hv.gGZj.Az6
+17:44:46 [http-nio-8080-exec-1] DEBUG o.s.s.a.d.DaoAuthenticationProvider      -: Authenticated user
+17:44:46 [http-nio-8080-exec-1] INFO  c.d.t.c.EntryPointController             -: done with  authentication
+17:44:46 [http-nio-8080-exec-1] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath 
+17:44:46 [http-nio-8080-exec-1] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+17:44:46 [http-nio-8080-exec-1] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$PFo0W9FKswS2mFpIbBRk0OWURFbU6sDfMmNoFyyvc1hv.gGZj.Az6
+17:44:46 [http-nio-8080-exec-1] INFO  c.d.t.c.EntryPointController             -: UserDetails = com.diatoz.task1.securitydb.AccountUserDetails@4b8db9c0
+17:45:11 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /test/admin
+17:45:11 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BZG1pbiJ9XSwic3ViIjoicHJhdGgiLCJpYXQiOjE2OTkyNzI4ODYsImV4cCI6MTY5OTI5MDg4Nn0.B1tI7nKhPautV7Kx34SmkO6AROrUgx4PByv3bU2sEkM_393U--tyS9y_BzhUaaOmI5ISuLe8j3w_pYSG4uq1PA
+17:45:11 [http-nio-8080-exec-3] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_Admin}], sub=prath, iat=1699272886, exp=1699290886}
+17:45:11 [http-nio-8080-exec-3] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath 
+17:45:11 [http-nio-8080-exec-3] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+17:45:11 [http-nio-8080-exec-3] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$PFo0W9FKswS2mFpIbBRk0OWURFbU6sDfMmNoFyyvc1hv.gGZj.Az6
+17:45:11 [http-nio-8080-exec-3] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_Admin}], sub=prath, iat=1699272886, exp=1699290886}
+17:45:11 [http-nio-8080-exec-3] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_Admin}], sub=prath, iat=1699272886, exp=1699290886}
+17:45:11 [http-nio-8080-exec-3] INFO  com.diatoz.task1.security.JwtHelper      -: Expiration timen=Mon Nov 06 22:44:46 IST 2023
+17:45:11 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: current Thread Thread[#42,http-nio-8080-exec-3,5,main]
+17:45:11 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Authentication details : UsernamePasswordAuthenticationToken [Principal=com.diatoz.task1.securitydb.AccountUserDetails@3756a26d, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_Admin]]
+17:45:11 [http-nio-8080-exec-3] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+17:45:11 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl        -: Responding with 403 status code
+17:45:11 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /error
+17:45:11 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+17:45:11 [http-nio-8080-exec-3] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
+17:45:13 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /test/admin
+17:45:13 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BZG1pbiJ9XSwic3ViIjoicHJhdGgiLCJpYXQiOjE2OTkyNzI4ODYsImV4cCI6MTY5OTI5MDg4Nn0.B1tI7nKhPautV7Kx34SmkO6AROrUgx4PByv3bU2sEkM_393U--tyS9y_BzhUaaOmI5ISuLe8j3w_pYSG4uq1PA
+17:45:13 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_Admin}], sub=prath, iat=1699272886, exp=1699290886}
+17:45:13 [http-nio-8080-exec-4] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath 
+17:45:13 [http-nio-8080-exec-4] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+17:45:13 [http-nio-8080-exec-4] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$PFo0W9FKswS2mFpIbBRk0OWURFbU6sDfMmNoFyyvc1hv.gGZj.Az6
+17:45:13 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_Admin}], sub=prath, iat=1699272886, exp=1699290886}
+17:45:13 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_Admin}], sub=prath, iat=1699272886, exp=1699290886}
+17:45:13 [http-nio-8080-exec-4] INFO  com.diatoz.task1.security.JwtHelper      -: Expiration timen=Mon Nov 06 22:44:46 IST 2023
+17:45:13 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: current Thread Thread[#43,http-nio-8080-exec-4,5,main]
+17:45:13 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Authentication details : UsernamePasswordAuthenticationToken [Principal=com.diatoz.task1.securitydb.AccountUserDetails@301e0712, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_Admin]]
+17:45:13 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+17:45:13 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl        -: Responding with 403 status code
+17:45:13 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /error
+17:45:13 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+17:45:13 [http-nio-8080-exec-4] ERROR c.d.t.security.JwtSecurityEntryPoint     -: message = Full authentication is required to access this resource
+17:45:20 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+17:45:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+17:45:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+17:45:25 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+17:45:25 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 17368 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+17:45:25 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+17:45:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:45:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+17:45:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+17:45:27 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+17:45:27 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+17:45:27 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+17:45:27 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+17:45:27 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 2150 ms
+17:45:27 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+17:45:27 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+17:45:27 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+17:45:28 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+17:45:28 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+17:45:28 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+17:45:28 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fc1abf
+17:45:28 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+17:45:28 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+17:45:29 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:45:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:45:30 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:45:30 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@301c622d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14b0b7f9, org.springframework.security.web.context.SecurityContextHolderFilter@58ca1cad, org.springframework.security.web.header.HeaderWriterFilter@a1c4f69, org.springframework.security.web.authentication.logout.LogoutFilter@4250b0c1, com.diatoz.task1.security.JwtAuthenticationFilter@2fca9fae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31b6eec8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5edce7da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16a78700, org.springframework.security.web.session.SessionManagementFilter@72ae1007, org.springframework.security.web.access.ExceptionTranslationFilter@1f138b74, org.springframework.security.web.access.intercept.AuthorizationFilter@25502b1c]
+17:45:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+17:45:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+17:45:31 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 6.0 seconds (process running for 6.745)
+17:45:38 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:45:38 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+17:45:38 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 1 ms
+17:45:38 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /test/admin
+17:45:38 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BZG1pbiJ9XSwic3ViIjoicHJhdGgiLCJpYXQiOjE2OTkyNzI4ODYsImV4cCI6MTY5OTI5MDg4Nn0.B1tI7nKhPautV7Kx34SmkO6AROrUgx4PByv3bU2sEkM_393U--tyS9y_BzhUaaOmI5ISuLe8j3w_pYSG4uq1PA
+17:45:38 [http-nio-8080-exec-2] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_Admin}], sub=prath, iat=1699272886, exp=1699290886}
+17:45:38 [http-nio-8080-exec-2] INFO  o.s.s.c.u.UserDetailsService             -: load the user by user name for user prath 
+17:45:38 [http-nio-8080-exec-2] INFO  o.s.s.core.userdetails.UserDetails       -: Authentication on UserDetails 
+17:45:38 [http-nio-8080-exec-2] INFO  o.s.s.c.u.UserDetailsService             -: $2a$10$PFo0W9FKswS2mFpIbBRk0OWURFbU6sDfMmNoFyyvc1hv.gGZj.Az6
+17:45:38 [http-nio-8080-exec-2] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_Admin}], sub=prath, iat=1699272886, exp=1699290886}
+17:45:38 [http-nio-8080-exec-2] INFO  com.diatoz.task1.security.JwtHelper      -: Claims = {roles=[{authority=ROLE_Admin}], sub=prath, iat=1699272886, exp=1699290886}
+17:45:38 [http-nio-8080-exec-2] INFO  com.diatoz.task1.security.JwtHelper      -: Expiration timen=Mon Nov 06 22:44:46 IST 2023
+17:45:38 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: current Thread Thread[#41,http-nio-8080-exec-2,5,main]
+17:45:38 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Authentication details : UsernamePasswordAuthenticationToken [Principal=com.diatoz.task1.securitydb.AccountUserDetails@1f7543f9, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+17:45:38 [http-nio-8080-exec-2] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+17:45:38 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy        -: Secured GET /test/admin
+17:52:24 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Closing JPA EntityManagerFactory for persistence unit 'default'
+17:52:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown initiated...
+17:52:24 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Shutdown completed.
+17:52:30 [background-preinit] INFO  o.h.validator.internal.util.Version      -: HV000001: Hibernate Validator 8.0.1.Final
+17:52:30 [main] INFO  com.diatoz.task1.Task1Application        -: Starting Task1Application using Java 21 with PID 14500 (C:\Users\prath\OneDrive\Desktop\Project\task1\target\classes started by prath in C:\Users\prath\OneDrive\Desktop\Project\task1)
+17:52:30 [main] INFO  com.diatoz.task1.Task1Application        -: No active profile set, falling back to 1 default profile: "default"
+17:52:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:52:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -: Finished Spring Data repository scanning in 97 ms. Found 3 JPA repository interfaces.
+17:52:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat initialized with port(s): 8080 (http)
+17:52:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Initializing ProtocolHandler ["http-nio-8080"]
+17:52:32 [main] INFO  o.a.catalina.core.StandardService        -: Starting service [Tomcat]
+17:52:32 [main] INFO  o.a.catalina.core.StandardEngine         -: Starting Servlet engine: [Apache Tomcat/10.1.13]
+17:52:32 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring embedded WebApplicationContext
+17:52:32 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -: Root WebApplicationContext: initialization completed in 2406 ms
+17:52:32 [main] INFO  o.h.jpa.internal.util.LogHelper          -: HHH000204: Processing PersistenceUnitInfo [name: default]
+17:52:33 [main] INFO  org.hibernate.Version                    -: HHH000412: Hibernate ORM core version 6.2.9.Final
+17:52:33 [main] INFO  org.hibernate.cfg.Environment            -: HHH000406: Using bytecode reflection optimizer
+17:52:33 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+17:52:33 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      -: No LoadTimeWeaver setup: ignoring JPA class transformer
+17:52:33 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Starting...
+17:52:33 [main] INFO  com.zaxxer.hikari.pool.HikariPool        -: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f4f1536
+17:52:34 [main] INFO  com.zaxxer.hikari.HikariDataSource       -: HikariPool-1 - Start completed.
+17:52:34 [main] INFO  o.h.b.i.BytecodeProviderInitiator        -: HHH000021: Bytecode provider name : bytebuddy
+17:52:35 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       -: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:52:35 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -: Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:52:35 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:52:36 [main] INFO  o.s.s.web.DefaultSecurityFilterChain     -: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b21cbbf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@578ac0be, org.springframework.security.web.context.SecurityContextHolderFilter@7a285418, org.springframework.security.web.header.HeaderWriterFilter@3a1540be, org.springframework.security.web.authentication.logout.LogoutFilter@65528bcf, com.diatoz.task1.security.JwtAuthenticationFilter@3c981f76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74471600, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@80081d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4250b0c1, org.springframework.security.web.session.SessionManagementFilter@1f138b74, org.springframework.security.web.access.ExceptionTranslationFilter@4924ad09, org.springframework.security.web.access.intercept.AuthorizationFilter@19bad88]
+17:52:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol      -: Starting ProtocolHandler ["http-nio-8080"]
+17:52:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer         -: Tomcat started on port(s): 8080 (http) with context path ''
+17:52:36 [main] INFO  com.diatoz.task1.Task1Application        -: Started Task1Application in 6.97 seconds (process running for 7.852)
+17:53:05 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]       -: Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:53:05 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Initializing Servlet 'dispatcherServlet'
+17:53:05 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet        -: Completed initialization in 2 ms
+17:53:05 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/create
+17:53:05 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+17:53:05 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+17:53:05 [http-nio-8080-exec-1] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+17:53:05 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+17:53:05 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter        -: Request requested invalid session id 6E976CCB31A5CB3DB03AC2FA5340C10E
+17:53:05 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/create
+17:53:05 [http-nio-8080-exec-1] INFO  org.slf4j.LoggerFactory                  -:  Cannot create the account The User is already Present
+17:53:14 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Securing POST /auth/create
+17:53:14 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+17:53:14 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+17:53:14 [http-nio-8080-exec-4] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+17:53:14 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+17:53:14 [http-nio-8080-exec-4] DEBUG o.s.s.w.s.SessionManagementFilter        -: Request requested invalid session id 6E976CCB31A5CB3DB03AC2FA5340C10E
+17:53:14 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy        -: Secured POST /auth/create
+17:53:21 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy        -: Securing GET /auth/getAllUser
+17:53:21 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -:  Header :  null
+17:53:21 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: Invalid Header Value !! 
+17:53:21 [http-nio-8080-exec-5] INFO  o.s.web.filter.OncePerRequestFilter      -: Filter will called
+17:53:21 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter  -: Set SecurityContextHolder to anonymous SecurityContext
+17:53:21 [http-nio-8080-exec-5] DEBUG o.s.s.w.s.SessionManagementFilter        -: Request requested invalid session id 6E976CCB31A5CB3DB03AC2FA5340C10E
+17:53:21 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy        -: Secured GET /auth/getAllUser
+17:53:21 [http-nio-8080-exec-5] INFO  org.slf4j.LoggerFactory                  -: Fetching the all the data

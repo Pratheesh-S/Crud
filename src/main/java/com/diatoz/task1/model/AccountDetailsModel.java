@@ -1,9 +1,13 @@
 package com.diatoz.task1.model;
 
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import org.hibernate.validator.constraints.Length;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class AccountDetailsModel {
     @NotBlank(message = "{accountDetails.username.blank}")
@@ -16,7 +20,7 @@ public class AccountDetailsModel {
     private String password;
 
 
-    @NotNull(message="{accountDetails.roles.notNull}")
+    @NotNull(message = "{accountDetails.roles.notNull}")
     @Size(min = 1, message = "At least one role must be selected")
     private Set<String> roles;
 
@@ -41,7 +45,7 @@ public class AccountDetailsModel {
     }
 
     public void setRoles(Set<String> roles) {
-        this.roles = roles;
+        this.roles = roles.stream().map(String::toUpperCase).collect(Collectors.toSet());
     }
 
     @Override
