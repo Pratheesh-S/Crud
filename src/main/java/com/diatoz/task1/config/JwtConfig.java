@@ -24,9 +24,9 @@ public class JwtConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable).cors(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll())
-                        .authorizeHttpRequests(auth->auth.requestMatchers("/student/user/**","/college/user/**")
+                        .authorizeHttpRequests(auth->auth.requestMatchers("/student/user/**","/college/user/**","/test/user")
                                 .hasRole("USER"))
-                        .authorizeHttpRequests(auth->auth.requestMatchers("/student/admin/**","/college/admin/**")
+                        .authorizeHttpRequests(auth->auth.requestMatchers("/student/admin/**","/college/admin/**","/test/admin")
                                 .hasRole("ADMIN").anyRequest().authenticated()).
                         exceptionHandling(ex -> ex.authenticationEntryPoint(point))
                         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
