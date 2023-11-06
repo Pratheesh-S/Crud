@@ -57,7 +57,7 @@ public class EntryPointController {
             throw new LoginDataException(errorMap);
         }
 
-        this.doAuthenticate(request.getUserName(), request.getPassword());
+         this.doAuthenticate(request.getUserName(), request.getPassword());
 
 
         UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUserName());
@@ -75,7 +75,6 @@ public class EntryPointController {
 
         UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(email, password);
         try {
-
             manager.authenticate(authentication);
             logger.info("done with  authentication");
 

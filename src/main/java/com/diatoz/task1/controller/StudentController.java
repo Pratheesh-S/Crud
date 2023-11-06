@@ -33,7 +33,7 @@ public class StudentController {
 
     Logger logger = LoggerFactory.getLogger(StudentController.class);
 
-    @RequestMapping(value = "/saveStudent", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "admin/saveStudent", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "save the student record", description = "save the student details along with the college ,note: college details has to be in database")
     public ResponseEntity<StudentEntity> saveStudent(@Validated @RequestBody StudentEntity studentEntity, BindingResult result) throws IdException, DataNotProper, JsonProcessingException, StudentDataException {
         logger.info("Inside the Control class" + studentEntity.getStudentJoinYear());
@@ -54,13 +54,13 @@ public class StudentController {
     }
 
 
-    @RequestMapping(value = "/getStudent", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "user/getStudent", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<StudentEntity>> getStudent() {
         logger.info("User made a call to fetch the all Student");
         return ResponseEntity.ok(studentService.getALlStudent());
     }
 
-    @RequestMapping(value = "/getStudentById/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "admin/getStudentById/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<StudentEntity> getStudentById(@PathVariable Integer id) throws IdException {
         return ResponseEntity.ok(studentService.getStudentById(id));
     }

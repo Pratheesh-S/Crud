@@ -1,8 +1,9 @@
 package com.diatoz.task1.model;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.Length;
+
+import java.util.Set;
 
 public class AccountDetailsModel {
     @NotBlank(message = "{accountDetails.username.blank}")
@@ -13,6 +14,11 @@ public class AccountDetailsModel {
     @Length(min = 6, message = "{accountDetails.password.min}")
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]+$", message = "{accountDetails.password.pattern}")
     private String password;
+
+
+    @NotNull(message="{accountDetails.roles.notNull}")
+    @Size(min = 1, message = "At least one role must be selected")
+    private Set<String> roles;
 
     public String getUserName() {
         return userName;
@@ -28,6 +34,14 @@ public class AccountDetailsModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Set<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<String> roles) {
+        this.roles = roles;
     }
 
     @Override

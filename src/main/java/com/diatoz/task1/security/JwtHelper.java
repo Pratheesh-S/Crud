@@ -6,13 +6,14 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 @Component
 public class JwtHelper {
@@ -40,6 +41,27 @@ public class JwtHelper {
         return claimsResolver.apply(claims);
     }
 
+    public List<SimpleGrantedAuthority> getAuthority(String token)
+    {
+        final Claims claims = getAllClaimsFromToken(token);
+        Object data = claims.get("roles");
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        if (data instanceof List) {
+            List<Map<String, String>> authorityData = (List<Map<String, String>>) data;
+            for (Map<String, String> authorityMap : authorityData) {
+                if (authorityMap.containsKey("authority")) {
+                    String authority = authorityMap.get("authority");
+                    authorities.add(new SimpleGrantedAuthority(authority));
+                }
+            }
+        }
+        logger.info("data of authorities {}",authorities);
+
+
+        return authorities;
+
+    }
+
     //for retrieveing any information from token we will need the secret key
     private Claims getAllClaimsFromToken(String token) {
         return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
@@ -55,6 +77,7 @@ public class JwtHelper {
     //generate token for user
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
+        claims.put("roles",userDetails.getAuthorities());
         return doGenerateToken(claims, userDetails.getUsername());
     }
 
@@ -73,8 +96,24 @@ public class JwtHelper {
     //validate token
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = getUsernameFromToken(token);
-        return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+        return (username.equals(userDetails.getUsername())  && !isTokenExpired(token));
     }
+
+//    private boolean checkTheAuthority(Collection<? extends GrantedAuthority> authorities, List<SimpleGrantedAuthority> authority) {
+//
+//        Set<String> authoritySet = authorities.stream()
+//                .map(GrantedAuthority::getAuthority)
+//                .collect(Collectors.toSet());
+//
+//        // Check if all authorities from the authority list are present in the authority set
+//        for (SimpleGrantedAuthority simpleGrantedAuthority : authority) {
+//            if (authoritySet.contains(simpleGrantedAuthority.getAuthority())) {
+//                return true;
+//            }
+//        }
+//
+//        return true;
+//    }
 
 
 }

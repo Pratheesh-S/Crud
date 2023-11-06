@@ -22,14 +22,6 @@
         "collegeId": {
           "type": "integer",
           "description": "Uniquely represent the College"
-        },
-        "collegeName": {
-          "type": "string",
-          "minLength": 1
-        },
-        "collegeLocation": {
-          "type": "string",
-          "minLength": 1
         }
       },
       "required": [

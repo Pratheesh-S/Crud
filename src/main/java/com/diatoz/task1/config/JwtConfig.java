@@ -23,10 +23,13 @@ public class JwtConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable).cors(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/*").permitAll().
-                        anyRequest().authenticated()).
-                exceptionHandling(ex -> ex.authenticationEntryPoint(point))
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll())
+                        .authorizeHttpRequests(auth->auth.requestMatchers("/student/user/**","/college/user/**")
+                                .hasRole("USER"))
+                        .authorizeHttpRequests(auth->auth.requestMatchers("/student/admin/**","/college/admin/**")
+                                .hasRole("ADMIN").anyRequest().authenticated()).
+                        exceptionHandling(ex -> ex.authenticationEntryPoint(point))
+                        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }

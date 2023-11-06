@@ -24,7 +24,6 @@ public class LoadUserAccountData implements UserDetailsService {
         logger.info("load the user by user name for user {} ", username);
         Optional<AccountDetails> accountDetailsFromDb = loginDao.findById(username);
         if (accountDetailsFromDb.isPresent()) {
-            logger.info("loaded user data is {}", accountDetailsFromDb.get());
 
             UserDetails userDetails = new AccountUserDetails(accountDetailsFromDb.get());
             logger.info(userDetails.getPassword());
