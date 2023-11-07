@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class LoginServiceImpl implements LoginService {
@@ -33,7 +34,6 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public String createAccount(AccountDetailsModel accountDetailsModel) throws IdException, DataAccessException {
-
         AccountDetails accountDetails = accountBeanToEntity(accountDetailsModel);
 
         Optional<AccountDetails> dataFromDb = loginDao.findById(accountDetailsModel.getUserName());

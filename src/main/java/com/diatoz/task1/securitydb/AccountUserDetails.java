@@ -7,8 +7,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.Set;
 
 public class AccountUserDetails implements UserDetails {
     private final AccountDetails accountDetails;
@@ -16,12 +17,16 @@ public class AccountUserDetails implements UserDetails {
 
     public AccountUserDetails(AccountDetails accountDetails) {
         this.accountDetails = accountDetails;
-        logger.info("Authentication on UserDetails ");
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(new SimpleGrantedAuthority("Admin"));
+        Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        Set<String> accountRoles = accountDetails.getRoles();
+        for (String role : accountRoles) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.toUpperCase()));
+        }
+        return authorities;
     }
 
 
