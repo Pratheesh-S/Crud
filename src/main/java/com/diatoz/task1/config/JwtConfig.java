@@ -35,7 +35,6 @@ public class JwtConfig {
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll()
                         .anyRequest().authenticated())
                 .exceptionHandling(ex ->ex.accessDeniedHandler(accessDeniedHandler()).authenticationEntryPoint(point))
-
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
