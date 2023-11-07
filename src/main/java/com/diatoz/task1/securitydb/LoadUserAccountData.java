@@ -25,9 +25,7 @@ public class LoadUserAccountData implements UserDetailsService {
         Optional<AccountDetails> accountDetailsFromDb = loginDao.findById(username);
         if (accountDetailsFromDb.isPresent()) {
 
-            UserDetails userDetails = new AccountUserDetails(accountDetailsFromDb.get());
-            logger.info(userDetails.getPassword());
-            return userDetails;
+            return new AccountUserDetails(accountDetailsFromDb.get());
         }
         logger.error("Username is not found in database");
         throw new UsernameNotFoundException("User With given Username not  present in the database, please provide valid data");

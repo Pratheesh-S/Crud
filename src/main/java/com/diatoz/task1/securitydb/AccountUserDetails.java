@@ -17,7 +17,6 @@ public class AccountUserDetails implements UserDetails {
 
     public AccountUserDetails(AccountDetails accountDetails) {
         this.accountDetails = accountDetails;
-        logger.info("Authentication on UserDetails ");
     }
 
     @Override
