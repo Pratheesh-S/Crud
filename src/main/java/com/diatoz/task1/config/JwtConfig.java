@@ -32,7 +32,7 @@ public class JwtConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable).cors(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**").permitAll()
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/**","/actuator/**").permitAll()
                         .anyRequest().authenticated())
                 .exceptionHandling(ex ->ex.accessDeniedHandler(accessDeniedHandler()).authenticationEntryPoint(point))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
