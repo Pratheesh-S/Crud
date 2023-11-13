@@ -1,5 +1,8 @@
 package com.diatoz.task1.security;
 
+import com.diatoz.task1.model.JwtResponse;
+import com.diatoz.task1.refreshToken.RefreshTokenContentClass;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
 import jakarta.servlet.FilterChain;
@@ -9,12 +12,15 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
@@ -25,13 +31,16 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final Logger logger = LoggerFactory.getLogger(OncePerRequestFilter.class);
     @Autowired
     private JwtHelper jwtHelper;
-
-
     @Autowired
-    private UserDetailsService userDetailsService;
+    UserDetailsService userDetailsService;
+    @Autowired
+    RefreshTokenContentClass refreshTokenContentClass;
+
+
+
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ExpiredJwtException,ServletException, IOException {
 
 
         String requestHeader = request.getHeader("Authorization");
@@ -41,24 +50,35 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String token = null;
         if (requestHeader != null && requestHeader.startsWith("Bearer")) {
             //looking good
+
+
             token = requestHeader.substring(7);
-            try {
 
-                username = this.jwtHelper.getUsernameFromToken(token);
+                try {
+                    username = this.jwtHelper.getUsernameFromToken(token);
 
-            } catch (IllegalArgumentException e) {
-                logger.info("Illegal Argument while fetching the username error = {} ", e.getMessage());
+                } catch (IllegalArgumentException e) {
+                    logger.info("Illegal Argument while fetching the username error = {} ", e.getMessage());
 
-            } catch (ExpiredJwtException e) {
-                logger.info("Given jwt token is expired !! " + e.getMessage());
+                } catch (ExpiredJwtException e) {
+                    String userName = e.getClaims().get("userName",String.class);
+                    logger.info("Given jwt token is expired !! " + e.getMessage());
+                    JwtResponse jwtResponse = refreshTokenContentClass.getAccessTokenFromRefreshToken(token,request.getCookies(), response,userName);
+                    ObjectMapper objectMapper = new ObjectMapper();
+                    objectMapper.writeValueAsString(jwtResponse);
+                    response.setContentType("application/json");
+                    response.setCharacterEncoding("UTF-8");
+                    response.setStatus(HttpServletResponse.SC_OK);
+                    response.getWriter().write(objectMapper.writeValueAsString(jwtResponse));
 
-            } catch (MalformedJwtException e) {
-                logger.info("Some changed has done in token !! Invalid Token  {} ", e.getMessage());
 
-            } catch (Exception e) {
-                logger.info("Unknown Exception occur = {}", e.getMessage());
+                } catch (MalformedJwtException e) {
+                    logger.info("Some changed has done in token !! Invalid Token  {} ", e.getMessage());
 
-            }
+                } catch (Exception e) {
+                    logger.info("Unknown Exception occur = {}", e.getMessage());
+
+                }
 
 
         } else {
@@ -88,10 +108,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
 
         }
+
         logger.info("Filter will called");
 
         filterChain.doFilter(request, response);
 
 
     }
+
+
 }

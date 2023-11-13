@@ -2,26 +2,36 @@ package com.diatoz.task1.security;
 
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.*;
 import java.util.function.Function;
 
 @Component
 public class JwtHelper {
+
+    @Autowired
+    JwtRefreshHelper jwtRefreshHelper;
     //requirement :
-    public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
+    public static final long JWT_TOKEN_VALIDITY =  30 ;
     public final Logger logger = LoggerFactory.getLogger(JwtHelper.class);
 
     //    public static final long JWT_TOKEN_VALIDITY =  60;
 
     private final String secret = "afafasfafafasfasfasfafacasdasfasxASFACASDFACASDFASFASFDAFASFASDAADSCSDFADCVSGCFVADXCcadwavfsfarvf";
+
 
     //retrieve username from jwt token
     public String getUsernameFromToken(String token) {
@@ -39,29 +49,10 @@ public class JwtHelper {
         return claimsResolver.apply(claims);
     }
 
-    public List<SimpleGrantedAuthority> getAuthority(String token) {
-        final Claims claims = getAllClaimsFromToken(token);
-        Object data = claims.get("roles");
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        if (data instanceof List) {
-            List<Map<String, String>> authorityData = (List<Map<String, String>>) data;
-            for (Map<String, String> authorityMap : authorityData) {
-                if (authorityMap.containsKey("authority")) {
-                    String authority = authorityMap.get("authority");
-                    authorities.add(new SimpleGrantedAuthority(authority));
-                }
-            }
-        }
-        logger.info("data of authorities {}", authorities);
 
+    private Claims getAllClaimsFromToken(String token)  {
+            return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
 
-        return authorities;
-
-    }
-
-    //for retrieveing any information from token we will need the secret key
-    private Claims getAllClaimsFromToken(String token) {
-        return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }
 
     //check if the token has expired
@@ -72,11 +63,16 @@ public class JwtHelper {
     }
 
     //generate token for user
-    public String generateToken(UserDetails userDetails) {
+    public String generateToken(UserDetails userDetails, HttpServletResponse httpResponse) {
+        jwtRefreshHelper.generateRefreshToken(userDetails, httpResponse);
         Map<String, Object> claims = new HashMap<>();
+        claims.put("userName",userDetails.getUsername());
         claims.put("roles", userDetails.getAuthorities());
         return doGenerateToken(claims, userDetails.getUsername());
     }
+
+
+
 
     //while creating the token -
     //1. Define  claims of the token, like Issuer, Expiration, Subject, and the ID
@@ -95,22 +91,14 @@ public class JwtHelper {
         final String username = getUsernameFromToken(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
+    @ExceptionHandler(ExpiredJwtException.class)
+    public ResponseEntity<String> getjwtTokenExpireException(ExpiredJwtException ex)
+    {
+        logger.error("JwtTokenExpired  {}",ex.getMessage());
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
 
-//    private boolean checkTheAuthority(Collection<? extends GrantedAuthority> authorities, List<SimpleGrantedAuthority> authority) {
-//
-//        Set<String> authoritySet = authorities.stream()
-//                .map(GrantedAuthority::getAuthority)
-//                .collect(Collectors.toSet());
-//
-//        // Check if all authorities from the authority list are present in the authority set
-//        for (SimpleGrantedAuthority simpleGrantedAuthority : authority) {
-//            if (authoritySet.contains(simpleGrantedAuthority.getAuthority())) {
-//                return true;
-//            }
-//        }
-//
-//        return true;
-//    }
+    }
+
 
 
 }

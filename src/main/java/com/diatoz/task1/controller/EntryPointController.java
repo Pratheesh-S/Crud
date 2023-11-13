@@ -8,6 +8,8 @@ import com.diatoz.task1.model.JwtRequest;
 import com.diatoz.task1.model.JwtResponse;
 import com.diatoz.task1.security.JwtHelper;
 import com.diatoz.task1.service.LoginService;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("auth")
 public class EntryPointController {
 
     @Autowired
@@ -47,7 +49,7 @@ public class EntryPointController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<JwtResponse> login(@Validated @RequestBody JwtRequest request, BindingResult result) throws LoginDataException {
+    public ResponseEntity<JwtResponse> login(@Validated @RequestBody JwtRequest request, HttpServletResponse httpResponse, BindingResult result) throws LoginDataException {
         if ((result.hasErrors())) {
             Map<String, String> errorMap = new HashMap<>();
             for (FieldError fieldError : result.getFieldErrors()) {
@@ -63,7 +65,7 @@ public class EntryPointController {
 
         UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUserName());
         logger.info("UserDetails = {}", userDetails);
-        String token = this.helper.generateToken(userDetails);
+        String token = this.helper.generateToken(userDetails,httpResponse);
 
         JwtResponse response = new JwtResponse();
         response.setJwtToken(token);
@@ -71,6 +73,10 @@ public class EntryPointController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+
+
+
 
     private void doAuthenticate(String email, String password) {
 
@@ -119,7 +125,7 @@ public class EntryPointController {
     }
 
     @RequestMapping(value = "/getAllUser", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+//    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<List<AccountDetailsModel>> getAllAccount() {
         return ResponseEntity.ok(loginService.getAllUser());
 

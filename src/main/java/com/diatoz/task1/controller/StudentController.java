@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/student")
+@RequestMapping("student")
 public class StudentController {
     @Autowired
     StudentServiceImpl studentService;

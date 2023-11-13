@@ -2,6 +2,7 @@ package com.diatoz.task1.exceptionHandler;
 
 import com.diatoz.task1.customException.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,6 +60,8 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> getPassException(PasswordException passwordException) {
         return new ResponseEntity<>(passwordException.getMessage(), HttpStatus.BAD_REQUEST);
     }
+
+
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseEntity<String> accessDeniedException(AccessDeniedException accessDeniedException)
     {
