@@ -65,7 +65,7 @@ public class EntryPointController {
 
         UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUserName());
         logger.info("UserDetails = {}", userDetails);
-        String token = this.helper.generateToken(userDetails,httpResponse);
+        String token = this.helper.generateToken(userDetails);
 
         JwtResponse response = new JwtResponse();
         response.setJwtToken(token);

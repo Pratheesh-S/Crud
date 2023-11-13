@@ -13,6 +13,7 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.access.SecurityConfig;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -32,6 +33,12 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> getDataNotProper(DataNotProper dataNotProper) {
 
         return new ResponseEntity<>(dataNotProper.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(UsernameNotFoundException.class)
+    public ResponseEntity<String> usernameNotFound(UsernameNotFoundException ex) {
+        logger.error(ex.getMessage());
+
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(DataAccessException.class)

@@ -1,5 +1,7 @@
 package com.diatoz.task1.security;
 
+import com.diatoz.task1.entity.RefreshTokenEntity;
+import com.diatoz.task1.service.RefreshTokenService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -7,6 +9,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +21,10 @@ import java.util.function.Function;
 @Component
 public class JwtRefreshHelper {
 
-    public static long JWT_REFRESH_TOKEN_VALIDITY = 5 * 60 *60;
+    @Autowired
+    RefreshTokenService refreshTokenService;
+
+    public static long JWT_REFRESH_TOKEN_VALIDITY = 5*60 *60;
     public final Logger logger = LoggerFactory.getLogger(JwtRefreshHelper.class);
 
 
@@ -56,31 +62,32 @@ public class JwtRefreshHelper {
 
 
 
-    public String generateRefreshToken(UserDetails userDetails, HttpServletResponse httpServletResponse)
+    public String generateRefreshToken(UserDetails userDetails)
     {
         Map<String, Object> claims = new HashMap<>();
         claims.put("roles", userDetails.getAuthorities());
-        String refreshToken = doGenerateRefreshToken(claims,userDetails.getUsername(),httpServletResponse);
+        String refreshToken = doGenerateRefreshToken(claims,userDetails.getUsername());
         return refreshToken;
 
     }
 
-    private String doGenerateRefreshToken(Map<String, Object> claims, String username,HttpServletResponse httpServletResponse) {
+    private String doGenerateRefreshToken(Map<String, Object> claims, String username) {
         String token =  Jwts.builder().setClaims(claims).setSubject(username).setIssuedAt(new Date(System.currentTimeMillis())).
                 setExpiration(new Date(System.currentTimeMillis() + JWT_REFRESH_TOKEN_VALIDITY * 1000) )
                 .signWith(SignatureAlgorithm.HS512, refreshSecret).compact();
-        storeInCookies(token,httpServletResponse,username);
+
+        storeTheRefreshTokenInDatabase(token,username);
         return token;
     }
 
-    private void storeInCookies(String token, HttpServletResponse httpResponse,String userName) {
-        Cookie myCookie = new Cookie(userName, token);
-        myCookie.setPath("/");
-        logger.info("Refresh token set at Cookies   {}", myCookie.getValue());
-        myCookie.setMaxAge(3600 * 60); // Cookie will expire in 1 hour
-        httpResponse.addCookie(myCookie);
-
+    private void storeTheRefreshTokenInDatabase(String token,String userName)
+    {
+        RefreshTokenEntity refreshTokenEntity = new RefreshTokenEntity();
+        refreshTokenEntity.setRefreshToken(token);
+        refreshTokenEntity.setUsername(userName);
+        refreshTokenService.storeRefreshToken(refreshTokenEntity);
     }
+
 
 
     //validate token

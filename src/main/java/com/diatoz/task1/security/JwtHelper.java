@@ -63,8 +63,8 @@ public class JwtHelper {
     }
 
     //generate token for user
-    public String generateToken(UserDetails userDetails, HttpServletResponse httpResponse) {
-        jwtRefreshHelper.generateRefreshToken(userDetails, httpResponse);
+    public String generateToken(UserDetails userDetails) {
+        jwtRefreshHelper.generateRefreshToken(userDetails);
         Map<String, Object> claims = new HashMap<>();
         claims.put("userName",userDetails.getUsername());
         claims.put("roles", userDetails.getAuthorities());

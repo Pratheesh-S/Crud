@@ -1,5 +1,7 @@
 package com.diatoz.task1.security;
 
+import com.diatoz.task1.customException.DataRelatedException;
+import com.diatoz.task1.customException.IdException;
 import com.diatoz.task1.model.JwtResponse;
 import com.diatoz.task1.refreshToken.RefreshTokenContentClass;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -63,13 +65,26 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 } catch (ExpiredJwtException e) {
                     String userName = e.getClaims().get("userName",String.class);
                     logger.info("Given jwt token is expired !! " + e.getMessage());
-                    JwtResponse jwtResponse = refreshTokenContentClass.getAccessTokenFromRefreshToken(token,request.getCookies(), response,userName);
+                    JwtResponse jwtResponse = null;
                     ObjectMapper objectMapper = new ObjectMapper();
                     objectMapper.writeValueAsString(jwtResponse);
                     response.setContentType("application/json");
                     response.setCharacterEncoding("UTF-8");
-                    response.setStatus(HttpServletResponse.SC_OK);
+                    response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+
+                    try {
+
+                        jwtResponse = refreshTokenContentClass.getAccessTokenFromRefreshToken(userName);
+
+                    } catch (DataRelatedException ex) {
+                        response.getWriter().write(objectMapper.writeValueAsString(ex.getError()));
+                        return;
+                    }
+
+
+                    response.getWriter().write("The Given Access token is expired use new Token ");
                     response.getWriter().write(objectMapper.writeValueAsString(jwtResponse));
+                    return;
 
 
                 } catch (MalformedJwtException e) {
